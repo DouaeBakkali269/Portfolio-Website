@@ -76,8 +76,8 @@
 
 					<!-- Animated main content -->
 					<div class="name-container">
-						<h1 class="name animate-text" style="--delay: 0.4s">BAKKALI Douae</h1>
-						<h2 class="greeting animate-text" style="--delay: 0.6s; color: white; font-weight: bold;">A
+						<h1 class="name animate-text" style="--delay: 0.4s" style="font-family:serif;">BAKKALI Douae</h1>
+						<h2 class="greeting animate-text" style="--delay: 0.6s; color: white; font-weight: bold; font-family:serif;">A
 							passionate Software Engineering Student</h2> <br />
 					</div>
 
@@ -88,21 +88,158 @@
 						<div class="dot" style="--left: 20%; --top: 70%; --delay: 0.6s"></div>
 						<div class="code-bracket">{ }</div>
 					</div>
+
+					<!-- NEW Social Links -->
+					<div class="hero-socials animate-icons" style="--delay: 0.8s">
+						<a href="https://github.com/DouaeBakkali269/" target="_blank" rel="noopener noreferrer"
+							aria-label="GitHub Profile">
+							<i class="icon ion-social-github"></i>
+						</a>
+						<a href="mailto:bakkalidouae75@gmail.com" aria-label="Send Email">
+							<i class="icon ion-ios-email-outline"></i> <!-- Using outline version -->
+						</a>
+						<a href="https://www.linkedin.com/in/douae-bakkali/" target="_blank" rel="noopener noreferrer"
+							aria-label="LinkedIn Profile">
+							<i class="icon ion-social-linkedin"></i>
+						</a>
+					</div>
+					<!-- End Social Links -->
 				</div>
 			</div>
 		</section>
 	</div>
 
 	<style>
-		/* Clean, feminine styling */
+		/* Styling for Hero Social Icons */
+		.hero-socials {
+			margin-top: 25px;
+			text-align: center;
+			opacity: 0;
+			transform: translateY(15px);
+			animation: fadeInUpSocials 0.6s ease-out forwards;
+			animation-delay: var(--delay, 0.8s);
+			/* Ensure it's part of the stacking context and can have its own z-index */
+			position: relative;
+			z-index: 3; /* Ensures icons are above immediate parent content if needed */
+            pointer-events: auto; /* Explicitly allow pointer events on the container */
+		}
+
+		.hero-socials a {
+			display: inline-block;
+			margin: 0 12px;
+			color: #ffffff;
+			text-decoration: none;
+			transition: color 0.3s ease, transform 0.3s ease;
+            /* Ensure links themselves are clickable */
+            position: relative; /* Good practice for interactive elements */
+            z-index: 4; /* Highest within the hero content */
+            pointer-events: auto; /* *** Crucial: Ensure links accept clicks *** */
+		}
+
+		.hero-socials a i.icon {
+			font-size: 2.2rem;
+			vertical-align: middle;
+            /* Icons themselves don't need pointer events, the link handles it */
+            pointer-events: none;
+		}
+
+		.hero-socials a:hover {
+			color: #0EB493;
+			transform: scale(1.1);
+		}
+
+		/* Simple Fade-Up Keyframes */
+		@keyframes fadeInUpSocials {
+			from {
+				opacity: 0;
+				transform: translateY(15px);
+			}
+			to {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+
+		/* Ensure hero content aligns well */
+		.hero-content {
+			text-align: center;
+			position: relative; /* Needed for z-index and positioning children */
+			z-index: 2;         /* *** Ensure content is above decorative elements (z-index: 1) *** */
+		}
+
+		/* Name container within hero-content */
+		.name-container {
+			display: inline-block;
+			text-align: center;
+            max-width: 800px; /* From your later rules */
+            margin: 0 auto;   /* From your later rules */
+            padding: 0 20px;  /* From your later rules */
+            position: relative; /* Ensure it respects parent stacking */
+            z-index: 2; /* Keep same level or slightly above other text if needed */
+		}
+
+		/* Text animation */
+		.animate-text {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s ease-out forwards;
+            animation-delay: var(--delay);
+		}
+
+        .animate-icons {
+            /* Already handled by .hero-socials animation */
+        }
+
+
+		/* --- Decorative elements --- */
+		.decorative-elements {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 1;             /* *** Keep behind hero-content (z-index: 2) *** */
+			pointer-events: none;   /* *** MOST CRUCIAL: Ignore clicks/hovers *** */
+		}
+
+		.decorative-elements .dot {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: rgba(14, 180, 147, 0.2);
+            border-radius: 50%;
+            left: var(--left);
+            top: var(--top);
+            opacity: 0;
+            animation: fadeIn 1s ease-out forwards;
+            animation-delay: var(--delay);
+            /* Inherits pointer-events: none from parent */
+		}
+
+		.decorative-elements .code-bracket {
+            position: absolute;
+            font-family: monospace;
+            color: rgba(14, 180, 147, 0.08);
+            font-size: 15rem;
+            bottom: -50px;
+            right: -30px;
+            z-index: -1; /* Keep it behind even the decorative dots if needed */
+            /* Inherits pointer-events: none from parent */
+		}
+        /* --- End Decorative elements --- */
+
+
+		/* Clean, feminine styling section - Keeping your styles */
 		#banner {
+            /* Combined from your rules */
 			color: #333;
 			padding: 80px 0;
 			min-height: 90vh;
 			display: flex;
 			align-items: center;
-			position: relative;
+			position: relative; /* Keeps stacking context */
 			overflow: hidden;
+            z-index: 0; /* Optional base z-index */
 		}
 
 		/* Navigation */
@@ -112,6 +249,7 @@
 			right: 30px;
 			display: flex;
 			gap: 25px;
+            z-index: 100; /* Ensure nav is always on top */
 		}
 
 		.mini-nav a {
@@ -127,23 +265,15 @@
 			color: #0EB493;
 		}
 
-		/* Centered content */
-		.name-container {
-			text-align: center;
-			max-width: 800px;
-			margin: 0 auto;
-			padding: 0 20px;
-			position: relative;
-			z-index: 2;
-		}
 
 		/* Text styles with animation */
 		.greeting {
 			font-size: 1.3rem;
-			color: #0EB493;
+			color: #0EB493; /* Your specific color */
 			margin-bottom: 5px;
-			font-weight: 300;
-			letter-spacing: 2px;
+			font-weight: 300; /* Your specific weight */
+			letter-spacing: 2px; /* Your specific spacing */
+            /* Animation handled by .animate-text */
 		}
 
 		.name {
@@ -152,82 +282,45 @@
 			font-weight: 700;
 			margin: 0;
 			line-height: 1.1;
-			color: #222;
+			color: #222; /* Your specific color */
 			letter-spacing: 1px;
+            /* Animation handled by .animate-text */
 		}
 
-		.title {
-			font-family: 'Montserrat', sans-serif;
-			font-size: 1.4rem;
-			font-weight: 300;
-			color: #666;
+		/* .title selector might conflict with your global .title style, rename if needed */
+        /* Assuming this is for the h2 subtitle */
+		.hero-content h2.greeting { /* More specific selector */
+            font-family: 'Montserrat', sans-serif; /* Apply only here if needed */
+			font-size: 1.4rem; /* Your specific size */
+			font-weight: 300; /* Your specific weight */
+			color: #fff; /* Your specific color (was white in HTML) */
 			margin: 15px 0 0 0;
-			letter-spacing: 3px;
-			text-transform: uppercase;
+			letter-spacing: 3px; /* Your specific spacing */
+			text-transform: uppercase; /* Your specific transform */
+            /* Animation handled by .animate-text */
 		}
 
-		/* Text animation */
-		.animate-text {
-			opacity: 0;
-			transform: translateY(20px);
-			animation: fadeInUp 0.8s ease-out forwards;
-			animation-delay: var(--delay);
-		}
-
+		/* Keyframes (already defined above or assumed global) */
 		@keyframes fadeInUp {
 			to {
 				opacity: 1;
 				transform: translateY(0);
 			}
 		}
-
-		/* Decorative elements */
-		.decorative-elements {
-			position: absolute;
-			width: 100%;
-			height: 100%;
-			top: 0;
-			left: 0;
-			pointer-events: none;
-			z-index: 1;
-		}
-
-		.dot {
-			position: absolute;
-			width: 8px;
-			height: 8px;
-			background: rgba(14, 180, 147, 0.2);
-			border-radius: 50%;
-			left: var(--left);
-			top: var(--top);
-			opacity: 0;
-			animation: fadeIn 1s ease-out forwards;
-			animation-delay: var(--delay);
-		}
-
-		.code-bracket {
-			position: absolute;
-			font-family: monospace;
-			color: rgba(14, 180, 147, 0.08);
-			font-size: 15rem;
-			bottom: -50px;
-			right: -30px;
-			z-index: -1;
-		}
-
-		@keyframes fadeIn {
+        @keyframes fadeIn {
 			to {
 				opacity: 1;
 			}
 		}
+
 
 		/* Responsive adjustments */
 		@media (max-width: 768px) {
 			.name {
 				font-size: 3rem;
 			}
-
-			.title {
+            /* Adjust the subtitle responsive style if needed */
+			.hero-content h2.greeting {
 				font-size: 1.1rem;
 			}
 
@@ -239,6 +332,10 @@
 			.code-bracket {
 				font-size: 10rem;
 			}
+
+            .hero-socials a i.icon {
+                font-size: 1.8rem; /* Slightly smaller on mobile */
+            }
 		}
 	</style>
 
@@ -540,28 +637,31 @@
 				<span class="skill-tag">UML</span>
 				<span class="skill-tag">Communication</span>
 			</div>
-<div style="margin-left: 520px;">
-	<br/>
-			<a href="https://github.com/DouaeBakkali269/stage-frontend" target="_blank" class="btn btn-github" rel="noopener noreferrer">
-				<i class="ion-social-github"></i> View Front-End on GitHub
-			</a>
-			<a href="https://github.com/DouaeBakkali269/Stage-Backend" target="_blank" class="btn btn-github" rel="noopener noreferrer">
-				<i class="ion-social-github"></i> View Backend on GitHub
-			</a>
-		</div>
+			<div style="margin-left: 520px;">
+				<br />
+				<a href="https://github.com/DouaeBakkali269/stage-frontend" target="_blank" class="btn btn-github"
+					rel="noopener noreferrer">
+					<i class="ion-social-github"></i> View Front-End on GitHub
+				</a>
+				<a href="https://github.com/DouaeBakkali269/Stage-Backend" target="_blank" class="btn btn-github"
+					rel="noopener noreferrer">
+					<i class="ion-social-github"></i> View Backend on GitHub
+				</a>
+			</div>
 		</div>
 
 	</div>
 
 	<!-- Start Projects Section -->
-	<!-- Start Portfolio Section -->
+
 	<section id="portfolio">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
 					<div class="title">
 						<h2>MY PROJECTS</h2>
-						<p>A selection of academic and personal projects showcasing my skills<br>in web development, mobile development, and AI/ML.</p>
+						<p>A selection of academic and personal projects showcasing my skills<br>in web development,
+							mobile development, and AI/ML.</p>
 					</div>
 					<div class="block">
 						<!-- Filter Menu (Remains the same) -->
@@ -584,7 +684,10 @@
 										<h4 class="card-title">Internship Management System</h4>
 										<span class="card-status">Completed (Academic)</span>
 										<p class="card-description">
-											Developed a web platform to streamline internship processes for students, companies, and universities. Features role-based dashboards (student, company, admin, etc.), application tracking, validation workflows, and evaluation management.
+											Developed a web platform to streamline internship processes for students,
+											companies, and universities. Features role-based dashboards (student,
+											company, admin, etc.), application tracking, validation workflows, and
+											evaluation management.
 										</p>
 										<div class="card-tags">
 											<span class="tag">Java</span>
@@ -597,11 +700,13 @@
 											<span class="tag">Git</span>
 										</div>
 										<div class="card-links">
-											<a href="https://github.com/DouaeBakkali269/Stage" target="_blank" class="btn btn-github" rel="noopener noreferrer">
-												<i class="ion-social-github"></i> View Back-End 
+											<a href="https://github.com/DouaeBakkali269/Stage" target="_blank"
+												class="btn btn-github" rel="noopener noreferrer">
+												<i class="ion-social-github"></i> View Back-End
 											</a>
-											<a href="https://github.com/OmarBEHRI/StageConnectFront" target="_blank" class="btn btn-github" rel="noopener noreferrer">
-												<i class="ion-social-github"></i> View Front-End 
+											<a href="https://github.com/OmarBEHRI/StageConnectFront" target="_blank"
+												class="btn btn-github" rel="noopener noreferrer">
+												<i class="ion-social-github"></i> View Front-End
 											</a>
 											<!-- Add Demo link if available -->
 											<!-- <a href="#" target="_blank" class="btn btn-demo"><i class="ion-eye"></i> Live Demo</a> -->
@@ -615,7 +720,9 @@
 										<h4 class="card-title">Training Management Web App</h4>
 										<span class="card-status">Completed (Academic)</span>
 										<p class="card-description">
-											Designed and implemented a web application for managing training sessions. Included needs analysis (UML), session scheduling, participant registration, trainer assignment, and management for different user profiles.
+											Designed and implemented a web application for managing training sessions.
+											Included needs analysis (UML), session scheduling, participant registration,
+											trainer assignment, and management for different user profiles.
 										</p>
 										<div class="card-tags">
 											<span class="tag">Java</span>
@@ -629,7 +736,8 @@
 											<span class="tag">Postman</span>
 										</div>
 										<div class="card-links">
-											<a href="[YOUR GITHUB LINK HERE]" target="_blank" class="btn btn-github" rel="noopener noreferrer">
+											<a href="[YOUR GITHUB LINK HERE]" target="_blank" class="btn btn-github"
+												rel="noopener noreferrer">
 												<i class="ion-social-github"></i> View on GitHub
 											</a>
 										</div>
@@ -642,7 +750,11 @@
 										<h4 class="card-title">Collaborative PM App (Android)</h4>
 										<span class="card-status">Ongoing</span>
 										<p class="card-description">
-											Developing a native Android application to facilitate team project management. Features include task creation/assignment, real-time collaboration (discussions, comments), progress dashboards, notifications, and file sharing. Exploring skill-based auto-assignment and potential integrations (Google Drive, etc.).
+											Developing a native Android application to facilitate team project
+											management. Features include task creation/assignment, real-time
+											collaboration (discussions, comments), progress dashboards, notifications,
+											and file sharing. Exploring skill-based auto-assignment and potential
+											integrations (Google Drive, etc.).
 										</p>
 										<div class="card-tags">
 											<span class="tag">Android</span>
@@ -652,7 +764,8 @@
 											<span class="tag">UI/UX Design</span>
 										</div>
 										<div class="card-links">
-											<a href="[YOUR GITHUB LINK HERE]" target="_blank" class="btn btn-github" rel="noopener noreferrer">
+											<a href="[YOUR GITHUB LINK HERE]" target="_blank" class="btn btn-github"
+												rel="noopener noreferrer">
 												<i class="ion-social-github"></i> View on GitHub
 											</a>
 										</div>
@@ -665,7 +778,10 @@
 										<h4 class="card-title">Moroccan Rent Price Prediction</h4>
 										<span class="card-status">Ongoing</span>
 										<p class="card-description">
-											A machine learning project focused on predicting the evolution of rental prices in Moroccan cities based on various property characteristics. Involves the complete ML lifecycle from data collection and preparation to model training, testing, and evaluation.
+											A machine learning project focused on predicting the evolution of rental
+											prices in Moroccan cities based on various property characteristics.
+											Involves the complete ML lifecycle from data collection and preparation to
+											model training, testing, and evaluation.
 										</p>
 										<div class="card-tags">
 											<span class="tag">Python</span>
@@ -676,7 +792,8 @@
 											<span class="tag">Regression</span>
 										</div>
 										<div class="card-links">
-											<a href="https://github.com/DouaeBakkali269/Data-Driven-Decision-Making-Project" target="_blank" class="btn btn-github" rel="noopener noreferrer">
+											<a href="https://github.com/DouaeBakkali269/Data-Driven-Decision-Making-Project"
+												target="_blank" class="btn btn-github" rel="noopener noreferrer">
 												<i class="ion-social-github"></i> View on GitHub
 											</a>
 										</div>
@@ -684,12 +801,16 @@
 								</li>
 
 								<!-- Project 5: Collaborative Space Exploration Hub -->
-								<li class="mix category-web category-ml col-md-4 col-xs-6" data-my-order="5"> <!-- Multiple categories -->
+								<li class="mix category-web category-ml col-md-4 col-xs-6" data-my-order="5">
+									<!-- Multiple categories -->
 									<div class="portfolio-card">
 										<h4 class="card-title">Space Exploration Hub (Web/DevOps/AI)</h4>
 										<span class="card-status">Ongoing</span>
 										<p class="card-description">
-											Building a user-driven platform for space enthusiasts. Features include posting/rating articles (with LLM-based verification for relevance, misinformation, plagiarism), space mission calendar, AI chatbot (trained on space data), courses, and an AI recommendation system.
+											Building a user-driven platform for space enthusiasts. Features include
+											posting/rating articles (with LLM-based verification for relevance,
+											misinformation, plagiarism), space mission calendar, AI chatbot (trained on
+											space data), courses, and an AI recommendation system.
 										</p>
 										<div class="card-tags">
 											<span class="tag">React</span>
@@ -702,41 +823,46 @@
 											<span class="tag">AI</span>
 										</div>
 										<div class="card-links">
-											<a href="[YOUR GITHUB LINK HERE]" target="_blank" class="btn btn-github" rel="noopener noreferrer">
+											<a href="[YOUR GITHUB LINK HERE]" target="_blank" class="btn btn-github"
+												rel="noopener noreferrer">
 												<i class="ion-social-github"></i> View on GitHub
 											</a>
 										</div>
 									</div>
 								</li>
 
-																<!-- Project 6: Personal Portfolio Website -->
-																<li class="mix category-web col-md-4 col-xs-6" data-my-order="6">
-																	<div class="portfolio-card">
-																		<h4 class="card-title">Personal Portfolio Website</h4>
-																		<span class="card-status">Complete</span>
-																		<p class="card-description">
-																			This very website! Designed and developed to showcase my skills, projects, experience, and contact information. Built using modern web technologies with a focus on responsiveness and interactive elements. Includes project filtering and dynamic content sections.
-																		</p>
-																		<div class="card-tags">
-																			<span class="tag">HTML5</span>
-																			<span class="tag">CSS3</span>
-																			<span class="tag">JavaScript</span>
-																			<span class="tag">Bootstrap</span>
-																			<span class="tag">jQuery</span>
-																			<span class="tag">MixItUp.js</span>
-																			<span class="tag">Ionicons</span>
-																			<span class="tag">Responsive Design</span>
-																			<!-- Add 'Three.js' if you get the background working -->
-																			<!-- <span class="tag">Three.js</span> -->
-																		</div>
-																		<div class="card-links">
-																			<a href="https://github.com/DouaeBakkali269/Portfolio-Website" target="_blank" class="btn btn-github" rel="noopener noreferrer">
-																				<i class="ion-social-github"></i> View Source
-																			</a>
-																			
-																		</div>
-																	</div>
-																</li>
+								<!-- Project 6: Personal Portfolio Website -->
+								<li class="mix category-web col-md-4 col-xs-6" data-my-order="6">
+									<div class="portfolio-card">
+										<h4 class="card-title">Personal Portfolio Website</h4>
+										<span class="card-status">Complete</span>
+										<p class="card-description">
+											This very website! Designed and developed to showcase my skills, projects,
+											experience, and contact information. Built using modern web technologies
+											with a focus on responsiveness and interactive elements. Includes project
+											filtering and dynamic content sections.
+										</p>
+										<div class="card-tags">
+											<span class="tag">HTML5</span>
+											<span class="tag">CSS3</span>
+											<span class="tag">JavaScript</span>
+											<span class="tag">Bootstrap</span>
+											<span class="tag">jQuery</span>
+											<span class="tag">MixItUp.js</span>
+											<span class="tag">Ionicons</span>
+											<span class="tag">Responsive Design</span>
+											<!-- Add 'Three.js' if you get the background working -->
+											<!-- <span class="tag">Three.js</span> -->
+										</div>
+										<div class="card-links">
+											<a href="https://github.com/DouaeBakkali269/Portfolio-Website"
+												target="_blank" class="btn btn-github" rel="noopener noreferrer">
+												<i class="ion-social-github"></i> View Source
+											</a>
+
+										</div>
+									</div>
+								</li>
 
 							</ul>
 						</div>
@@ -749,149 +875,201 @@
 
 	<style>
 		/* Portfolio Card Styles */
-.recent-work-cards ul {
-	/* Reset default list styling if needed */
-	padding-left: 0;
-	list-style: none;
-}
+		.recent-work-cards ul {
+			/* Reset default list styling if needed */
+			padding-left: 0;
+			list-style: none;
+		}
 
-.portfolio-card-list {
-    /* Ensures cards clear floats correctly if using older methods, modern flex/grid usually handles this */
-     overflow: hidden; /* Simple clearing */
-}
+		.portfolio-card-list {
+			/* Ensures cards clear floats correctly if using older methods, modern flex/grid usually handles this */
+			overflow: hidden;
+			/* Simple clearing */
+		}
 
-.portfolio-card {
-	background-color: #ffffff; /* White background for cards */
-	border: 1px solid #e9e9e9; /* Subtle border */
-	border-radius: 8px; /* Rounded corners */
-	padding: 25px; /* Inner spacing */
-	margin-bottom: 30px; /* Space below each card */
-	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Soft shadow */
-	transition: transform 0.3s ease, box-shadow 0.3s ease;
-	height: 100%; /* Make cards in a row the same height if using flex/grid on parent */
-	display: flex; /* Use flexbox for layout */
-	flex-direction: column; /* Stack elements vertically */
-    min-height: 400px; /* Minimum height to maintain consistency */
-}
+		.portfolio-card {
+			background-color: #ffffff;
+			/* White background for cards */
+			border: 1px solid #e9e9e9;
+			/* Subtle border */
+			border-radius: 8px;
+			/* Rounded corners */
+			padding: 25px;
+			/* Inner spacing */
+			margin-bottom: 30px;
+			/* Space below each card */
+			box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+			/* Soft shadow */
+			transition: transform 0.3s ease, box-shadow 0.3s ease;
+			height: 100%;
+			/* Make cards in a row the same height if using flex/grid on parent */
+			display: flex;
+			/* Use flexbox for layout */
+			flex-direction: column;
+			/* Stack elements vertically */
+			min-height: 400px;
+			/* Minimum height to maintain consistency */
+		}
 
-.portfolio-card:hover {
-	transform: translateY(-5px); /* Slight lift on hover */
-	box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); /* Enhanced shadow on hover */
-}
+		.portfolio-card:hover {
+			transform: translateY(-5px);
+			/* Slight lift on hover */
+			box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+			/* Enhanced shadow on hover */
+		}
 
-.portfolio-card .card-title {
-	font-size: 1.4em; /* Title size */
-	font-weight: 600;
-	color: #333; /* Darker title color */
-	margin-bottom: 5px; /* Space below title */
-}
+		.portfolio-card .card-title {
+			font-size: 1.4em;
+			/* Title size */
+			font-weight: 600;
+			color: #333;
+			/* Darker title color */
+			margin-bottom: 5px;
+			/* Space below title */
+		}
 
-.portfolio-card .card-status {
-    font-size: 0.8em;
-    color: #888;
-    margin-bottom: 15px;
-    display: inline-block; /* Allows margin-bottom */
-    font-style: italic;
-}
-
-
-.portfolio-card .card-description {
-	font-size: 0.95em; /* Description text size */
-	color: #555; /* Slightly lighter text color */
-	line-height: 1.6; /* Spacing between lines */
-	margin-bottom: 20px; /* Space below description */
-    flex-grow: 1; /* Allows description to push tags/button down */
-}
-
-.portfolio-card .card-tags {
-	margin-bottom: 20px; /* Space below tags */
-    display: flex;
-    flex-wrap: wrap; /* Allow tags to wrap */
-    gap: 8px; /* Space between tags */
-}
-
-.portfolio-card .tag {
-	display: inline-block; /* Treat tags as blocks for padding */
-	background-color: #e0f2fe; /* Light blue background */
-	color: #0369a1; /* Darker blue text */
-	padding: 4px 10px; /* Padding inside tag */
-	border-radius: 15px; /* Pill shape */
-	font-size: 0.8em; /* Smaller font for tags */
-	font-weight: 500;
-}
-
-.portfolio-card .card-links {
-	margin-top: auto; /* Push buttons to the bottom */
-    padding-top: 15px; /* Space above the button area */
-    border-top: 1px solid #f0f0f0; /* Separator line */
-    text-align: center; /* Center button(s) */
-}
-
-.portfolio-card .btn-github,
-.portfolio-card .btn-demo {
-	background-color: #333; /* GitHub-like dark background */
-	color: white;
-	padding: 8px 18px;
-	border-radius: 5px;
-	text-decoration: none;
-	display: inline-block; /* Allow margin/padding */
-	transition: background-color 0.3s ease, color 0.3s ease;
-	font-size: 0.9em;
-    border: none; /* Remove default button border */
-    cursor: pointer;
-    margin: 5px; /* Space if multiple buttons */
-}
-
-.portfolio-card .btn-github i,
-.portfolio-card .btn-demo i {
-	margin-right: 6px; /* Space between icon and text */
-}
-
-.portfolio-card .btn-github:hover {
-	background-color: #555; /* Lighter dark on hover */
-	color: white;
-}
-
-.portfolio-card .btn-demo {
-    background-color: #0EB493; /* Theme color for demo */
-}
-.portfolio-card .btn-demo:hover {
-    background-color: #0c9a7d; /* Darker theme color */
-}
-
-/* Style for placeholder card if used */
-.portfolio-card.placeholder {
-    background-color: #f9f9f9;
-    border-style: dashed;
-    align-items: center; /* Center content vertically */
-    justify-content: center; /* Center content horizontally */
-    text-align: center;
-}
-.portfolio-card.placeholder .card-title {
-    color: #999;
-}
-.portfolio-card.placeholder .card-description {
-    color: #aaa;
-    flex-grow: 0; /* Don't let description push */
-}
+		.portfolio-card .card-status {
+			font-size: 0.8em;
+			color: #888;
+			margin-bottom: 15px;
+			display: inline-block;
+			/* Allows margin-bottom */
+			font-style: italic;
+		}
 
 
-/* MixItUp Filter Button Styling (if not already styled) */
-.recent-work-mixMenu .btn {
-	background-color: #eee;
-	border: none;
-	padding: 8px 15px;
-	margin: 0 5px 10px;
-	border-radius: 4px;
-	cursor: pointer;
-	transition: background-color 0.3s ease;
-	font-weight: 500;
-}
-.recent-work-mixMenu .btn:hover,
-.recent-work-mixMenu .btn.mixitup-control-active { /* MixItUp v3+ uses this class */
-	background-color: #0EB493; /* Theme color */
-	color: white;
-}
+		.portfolio-card .card-description {
+			font-size: 0.95em;
+			/* Description text size */
+			color: #555;
+			/* Slightly lighter text color */
+			line-height: 1.6;
+			/* Spacing between lines */
+			margin-bottom: 20px;
+			/* Space below description */
+			flex-grow: 1;
+			/* Allows description to push tags/button down */
+		}
+
+		.portfolio-card .card-tags {
+			margin-bottom: 20px;
+			/* Space below tags */
+			display: flex;
+			flex-wrap: wrap;
+			/* Allow tags to wrap */
+			gap: 8px;
+			/* Space between tags */
+		}
+
+		.portfolio-card .tag {
+			display: inline-block;
+			/* Treat tags as blocks for padding */
+			background-color: #e0f2fe;
+			/* Light blue background */
+			color: #0369a1;
+			/* Darker blue text */
+			padding: 4px 10px;
+			/* Padding inside tag */
+			border-radius: 15px;
+			/* Pill shape */
+			font-size: 0.8em;
+			/* Smaller font for tags */
+			font-weight: 500;
+		}
+
+		.portfolio-card .card-links {
+			margin-top: auto;
+			/* Push buttons to the bottom */
+			padding-top: 15px;
+			/* Space above the button area */
+			border-top: 1px solid #f0f0f0;
+			/* Separator line */
+			text-align: center;
+			/* Center button(s) */
+		}
+
+		.portfolio-card .btn-github,
+		.portfolio-card .btn-demo {
+			background-color: #333;
+			/* GitHub-like dark background */
+			color: white;
+			padding: 8px 18px;
+			border-radius: 5px;
+			text-decoration: none;
+			display: inline-block;
+			/* Allow margin/padding */
+			transition: background-color 0.3s ease, color 0.3s ease;
+			font-size: 0.9em;
+			border: none;
+			/* Remove default button border */
+			cursor: pointer;
+			margin: 5px;
+			/* Space if multiple buttons */
+		}
+
+		.portfolio-card .btn-github i,
+		.portfolio-card .btn-demo i {
+			margin-right: 6px;
+			/* Space between icon and text */
+		}
+
+		.portfolio-card .btn-github:hover {
+			background-color: #555;
+			/* Lighter dark on hover */
+			color: white;
+		}
+
+		.portfolio-card .btn-demo {
+			background-color: #0EB493;
+			/* Theme color for demo */
+		}
+
+		.portfolio-card .btn-demo:hover {
+			background-color: #0c9a7d;
+			/* Darker theme color */
+		}
+
+		/* Style for placeholder card if used */
+		.portfolio-card.placeholder {
+			background-color: #f9f9f9;
+			border-style: dashed;
+			align-items: center;
+			/* Center content vertically */
+			justify-content: center;
+			/* Center content horizontally */
+			text-align: center;
+		}
+
+		.portfolio-card.placeholder .card-title {
+			color: #999;
+		}
+
+		.portfolio-card.placeholder .card-description {
+			color: #aaa;
+			flex-grow: 0;
+			/* Don't let description push */
+		}
+
+
+		/* MixItUp Filter Button Styling (if not already styled) */
+		.recent-work-mixMenu .btn {
+			background-color: #eee;
+			border: none;
+			padding: 8px 15px;
+			margin: 0 5px 10px;
+			border-radius: 4px;
+			cursor: pointer;
+			transition: background-color 0.3s ease;
+			font-weight: 500;
+		}
+
+		.recent-work-mixMenu .btn:hover,
+		.recent-work-mixMenu .btn.mixitup-control-active {
+			/* MixItUp v3+ uses this class */
+			background-color: #0EB493;
+			/* Theme color */
+			color: white;
+		}
 	</style>
 
 	<!-- Languages Section -->
