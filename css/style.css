@@ -1797,6 +1797,21 @@ header#navigation { /* More specific selector */
 }
 
 
+body {
+  overflow-x: hidden;
+}
+.hero-socials a {
+  padding: 12px; /* Bigger tap area */
+}
+/* For phones (up to 600px wide) */
+@media (max-width: 600px) {
+  .hero-content h1 {
+    font-size: 2rem !important; /* Smaller text */
+  }
+  .hero-socials a {
+    margin: 0 8px; /* Reduce icon spacing */
+  }
+}
 
 
 
