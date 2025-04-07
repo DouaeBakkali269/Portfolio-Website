@@ -449,162 +449,6 @@ header .navbar {
 #html5-watermark {
   display: none !important;
 }
-#testimonial {
-  padding: 77px 0;
-}
-#testimonial .col {
-  position: relative;
-  padding: 47px 60px;
-  overflow: hidden;
-}
-#testimonial .col-md-6 {
-    border: solid #dedede;
-    border-width: 0 1px 1px 0;
-    padding-bottom: 42px;
-}
-#testimonial .col-md-6:nth-child(3n) {
-      border-right: 0;
-}
-#testimonial .col-md-6:nth-child(5n) {
-      border-right: 0;
-      border-bottom: 0;
-}
-#testimonial .col-md-6:nth-child(4n) {
-  border-bottom: 0;
-}
-#testimonial .media .media-left {
-  padding-right: 20px;
-}
-#testimonial .media .media-left a {
-  position: relative;
-  display: block;
-}
-#testimonial .media .media-left a:before {
-  content: "\f347";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 28px;
-  height: 28px;
-  border-radius: 100%;
-  font-family: "Ionicons";
-  background: #80d6a3;
-  text-align: center;
-  color: #fff;
-  font-size: 13px;
-  padding-top: 2px;
-}
-#testimonial .media .media-body {
-  padding-top: 5px;
-}
-#testimonial .media .media-body h4 {
-  color: #444;
-  text-transform: uppercase;
-  margin-bottom: 12px;
-}
-#testimonial .media .media-body p {
-  font-size: 14px;
-  font-family: 'Lora', serif;
-  font-style: italic;
-  color: #787878;
-}
-#team {
-  padding: 80px 0 180px;
-}
-#team .block {
-  position: relative;
-  overflow: hidden;
-  border:3px solid transparent;
-  -webkit-transition: .4s all;
-  -o-transition: .4s all;
-  transition: .4s all;
-}
-#team .block img {
-  width: 100%;
-  position: relative;
-}
-
-#team .block:hover {
-  border: 3px solid #80d6a3;
-
-}
-#team .block:hover .team-overlay {
-  bottom: 0;
-  opacity: 1;
-}
-#team .team-overlay {
-  background: rgba(255, 255, 255, 0.95);
-  color: #fff;
-  text-align: center;
-  padding: 48px 62px;
-  position: absolute;
-  bottom: -150px;
-  left: 0;
-  opacity: 0;
-  width: 100%;
-  height: 100%;
-  
-  transition: 0.3s;
-}
-#team .team-overlay h3,
-#team .team-overlay span {
-  color: #333;
-}
-#team .team-overlay span {
-  display: block;
-  font-size: 13px;
-  padding-top: 10px;
-}
-#team .team-overlay .icon {
-  width: 38px;
-  height: 38px;
-  margin: 0 auto;
-  padding: 10px;
-  line-height: 1;
-  margin-top: 36px;
-  margin-bottom: 25px;
-  border-radius: 100%;
-  display: inline-block;
-  background: #80d6a3;
-}
-#team .team-overlay .icon i {
-  font-size: 18px;
-  color: #fff;
-}
-#team .team-overlay p {
-  font-size: 14px;
-  line-height: 23px;
-  color: #707a8a;
-  
-}
-#team .team-overlay .media {
-  margin-top: 10px;
-}
-#team .team-overlay .media a {
-  font-size: 12px;
-  color: #fff;
-  transition: 0.3s;
-  margin: 0 10px;
-}
-#team .team-overlay .media a:hover {
-  color: #80d6a3;
-}
-#pricing-table {
-  padding: 100px 0 127px;
-  background: #80d6a3;
-}
-#pricing-table .title h2,
-#pricing-table .title p {
-  color: #fff;
-}
-#pricing-table .title h2:before, #pricing-table .title h2:after {
-  background: #fff;
-}
-#pricing-table .block {
-  color: #fff;
-}
-
-
 
 #contact-form {
   padding: 100px 0;
@@ -650,20 +494,7 @@ header .navbar {
   background-color: #ffffff;
   border: 0;
 }
-/** Google Map**/
-/* line 125, ../../scss/_contact.scss */
-.map #googleMap {
-  min-height: 345px;
-  -webkit-filter: gray;
-  filter: gray;
-  filter: grayscale(100%);
-  -webkit-filter: grayscale(1);
-  -webkit-filter: grayscale(100%);
-}
-/* ================ Home end ========================= */
-/* =====================
-   contact page style
-   ===================== */
+
 #global-header {
   background: url(../img/contact-slider-img.jpg);
   background-size: cover;
@@ -698,36 +529,8 @@ header .navbar {
   font-family: 'Lora', serif;
 }
 
-/* ================ Contact end ========================= */
-/* =====================
-   Service page style
-   ===================== */
-#client-logo {
-  padding: 0 0 100px;
-  text-align: center;
-}
-#client-logo a {
-  padding: 14px 24px;
-  display: block;
-}
-#client-logo a img {
-  transition: 0.3s;
-  margin: 0 auto;
-}
-#client-logo a:hover img {
-  transform: scale(1.2);
-}
-footer {
-  background: #202322;
-  padding: 42px 0 65px 0;
-  text-align: center;
-}
-footer p {
-  font-size: 14px;
-  color: #fff;
-  line-height: 1;
-  padding-top: 26px;
-}
+
+
 /* =====================
    Blog Post
    ===================== */
@@ -1335,7 +1138,6 @@ font-weight: 500;
   text-transform: uppercase;
   font-size: 0.8rem;
   letter-spacing: 1px;
-  transition: background 0.3s;
   align-self: flex-start;
   margin-top: auto;
 }
@@ -2002,46 +1804,6 @@ header#navigation { /* More specific selector */
 
 
 
-/* Styling for Hero Social Icons */
-.hero-socials {
-    margin-top: 25px;
-    text-align: center;
-    opacity: 0;
-    transform: translateY(15px);
-    animation: fadeInUpSocials 0.6s ease-out forwards;
-    animation-delay: var(--delay, 0.8s);
-    position: relative; /* Ensure stacking */
-    z-index: 12;        /* Above name-container */
-    pointer-events: auto; /* Allow clicks on container */
-}
-
-.hero-socials a {
-    display: inline-block;
-    margin: 0 12px;
-    color: #ffffff; /* White icon color */
-    text-decoration: none;
-    transition: color 0.3s ease, transform 0.3s ease;
-    position: relative; /* Ensure stacking */
-    z-index: 13;        /* Highest content element */
-    pointer-events: auto; /* *** ESSENTIAL: Make links clickable *** */
-}
-
-.hero-socials a i.icon {
-    font-size: 2.2rem;
-    vertical-align: middle;
-    pointer-events: none; /* Icon itself doesn't need clicks */
-}
-
-.hero-socials a:hover {
-    color: #0EB493; /* Theme color hover */
-    transform: scale(1.1);
-}
-
-@keyframes fadeInUpSocials { /* Added keyframes */
-    from { opacity: 0; transform: translateY(15px); }
-    to   { opacity: 1; transform: translateY(0); }
-}
-/* === End Social Icons === */
 
 
 /* Banner Buttons (if used, ensure they are clickable) */
