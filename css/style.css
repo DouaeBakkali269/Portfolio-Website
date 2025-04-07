@@ -1759,17 +1759,17 @@ header#navigation { /* More specific selector */
 /* =================
    Home page style
    ================= */
-#banner {
-  background-size: cover;
-  padding: 250px 0; /* Adjust as needed for your design */
-  position: relative; /* Establishes stacking context */
-  overflow: hidden;   /* Added from later user styles */
-  min-height: 90vh; /* Added from later user styles */
-  display: flex;    /* Added from later user styles */
-  align-items: center; /* Added from later user styles */
-  color: #333;      /* Added from later user styles */
-  z-index: 0; /* Base stacking context */
-}
+   #banner {
+    background-size: cover;
+    padding: 250px 0; /* Adjust as needed for your design */
+    position: relative; /* Establishes stacking context */
+    overflow: hidden;   /* Added from later user styles */
+    min-height: 90vh; /* Added from later user styles */
+    display: flex;    /* Added from later user styles */
+    align-items: center; /* Added from later user styles */
+    color: #333;      /* Added from later user styles */
+    z-index: 0; /* Base stacking context */
+  }
 
 /* This overlay was likely blocking clicks if content z-index wasn't high enough */
 #banner:before {
