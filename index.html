@@ -109,6 +109,7 @@
 						<!-- Download cv icon-->
 						<a href="assets/cv_eng (1).pdf" download="CV-Douae-Bakkali.pdf" aria-label="Download CV">
 							<i class="icon ion-ios-download-outline"></i> <!-- Using outline version -->
+						</a> 
 					</div>
 					<!-- End Social Links -->
 				</div>
@@ -556,65 +557,212 @@
 	</section>
 
 
-
 	<!-- Start Education Section -->
-	<section id="counter">
-		<div class="container">
-			<section id="education">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-12">
-							<div class="title">
-								<h2>EDUCATION</h2>
-								<p>My academic background and qualifications.</p>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<!-- Education Item 1 -->
-						<div class="col-md-4 col-sm-6 col-xs-12">
-							<div class="feature-block text-center wow fadeInUp" data-wow-delay="0s"
-								style="color: white;">
-								<div class="icon-box">
-									<i class="ion-university"></i>
-								</div>
-								<h4>Engineering Cycle, Software Engineering</h4>
-								<p>ENSIAS, Rabat, Morocco<br><strong>2023 - 2025 </strong><br><em>2nd Year Student</em>
-								</p>
-							</div>
-						</div>
-						<!-- Education Item 2 -->
-						<div class="col-md-4 col-sm-6 col-xs-12">
-							<div class="feature-block text-center wow fadeInUp" data-wow-delay=".2s"
-								style="color: white;">
-								<div class="icon-box">
-									<i class="ion-calculator"></i>
-								</div>
-								<h4>Preparatory Classes (CPGE)</h4>
-								<p>CPGE Moulay El Hassan, Tangier<br><strong>2021 - 2023</strong><br><em>Mathematics and
-										Physics Option</em></p>
-							</div>
-						</div>
-						<!-- Education Item 3 -->
-						<div class="col-md-4 col-sm-6 col-xs-12">
-							<div class="feature-block text-center wow fadeInUp" data-wow-delay=".4s"
-								style="color: white;">
-								<div class="icon-box">
-									<i class="ion-ribbon-b"></i>
-								</div>
-								<h4>Baccalaureate, Mathematical Sciences B</h4>
-								<p>Lycée Technique Moulay Youssef, Tangier<br><strong>2020 -
-										2021</strong><br><em>Honors</em></p>
-							</div>
-						</div>
-					</div> <!-- / .row -->
-				</div> <!-- / .container -->
-			</section>
-			<!-- End Education Section -->
-		</div>
-	</section>
+<!-- Start Education Section -->
+<section id="education" class="education-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="title">
+                    <h2>EDUCATION</h2>
+                    <p>My academic background and qualifications.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Education Item 1 -->
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="education-card wow fadeInUp" data-wow-delay="0s">
+                    <div class="education-icon">
+                        <i class="ion-university"></i>
+                    </div>
+                    <div class="education-content">
+                        <h3>Software Engineering</h3>
+                        <h4>ENSIAS, Rabat</h4>
+                        <div class="education-meta">
+                            <span class="date">2023 - 2025</span>
+                            <span class="status">2nd Year Student</span>
+                        </div>
+                        <p>National School of Computer Science and Systems Analysis</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Education Item 2 -->
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="education-card wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="education-icon">
+                        <i class="ion-calculator"></i>
+                    </div>
+                    <div class="education-content">
+                        <h3>Preparatory Classes (CPGE)</h3>
+                        <h4>CPGE Moulay El Hassan</h4>
+                        <div class="education-meta">
+                            <span class="date">2021 - 2023</span>
+                            <span class="status">MP Option</span>
+                        </div>
+                        <p>Intensive program in Mathematics and Physics</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Education Item 3 -->
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <div class="education-card wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="education-icon">
+                        <i class="ion-ribbon-b"></i>
+                    </div>
+                    <div class="education-content">
+                        <h3>Baccalaureate</h3>
+                        <h4>Lycée Technique Moulay Youssef</h4>
+                        <div class="education-meta">
+                            <span class="date">2020 - 2021</span>
+                            <span class="status">Honors</span>
+                        </div>
+                        <p>Mathematical Sciences B with distinction</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<style>
+/* Education Section - Theme Matching */
+.education-section {
+    background: #fff;
+    padding: 80px 0;
+    font-family: 'Montserrat', sans-serif;
+}
 
+.section-header h2 {
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #222;
+    margin-bottom: 15px;
+    text-align: center;
+    letter-spacing: 1px;
+}
 
+.section-header p {
+    font-size: 18px;
+    color: #777;
+    text-align: center;
+    margin-bottom: 50px;
+    font-weight: 300;
+}
+
+.education-card {
+    background: #f9f9ff;
+    border-radius: 8px;
+    padding: 30px;
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    height: 100%;
+    border: 1px solid rgba(0,0,0,0.03);
+    position: relative;
+    overflow: hidden;
+}
+
+.education-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.education-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 20px;
+    background: rgba(14, 180, 147, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0EB493;
+    font-size: 30px;
+    transition: all 0.3s ease;
+}
+
+.education-card:hover .education-icon {
+    background: #0EB493;
+    color: white;
+    transform: scale(1.1);
+}
+
+.education-content h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 5px;
+}
+
+.education-content h4 {
+    font-size: 16px;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.education-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.education-meta .date {
+    background: rgba(14, 180, 147, 0.1);
+    color: #0EB493;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+.education-meta .status {
+    color: #777;
+    font-style: italic;
+}
+
+.education-content p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.wow.fadeInUp {
+    animation: fadeInUp 0.6s both;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .education-card {
+        padding: 20px;
+    }
+    
+    .education-content h3 {
+        font-size: 18px;
+    }
+    
+    .education-content h4 {
+        font-size: 15px;
+    }
+}
+
+</style>
 	<br /><br /><br />
 
 	<!-- Start Experience Section -->
