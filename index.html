@@ -76,8 +76,10 @@
 
 					<!-- Animated main content -->
 					<div class="name-container">
-						<h1 class="name animate-text" style="--delay: 0.4s" style="font-family:serif;">BAKKALI Douae</h1>
-						<h2 class="greeting animate-text" style="--delay: 0.6s; color: white; font-weight: bold; font-family:serif;">A
+						<h1 class="name animate-text" style="--delay: 0.4s" style="font-family:serif;">BAKKALI Douae
+						</h1>
+						<h2 class="greeting animate-text"
+							style="--delay: 0.6s; color: white; font-weight: bold; font-family:serif;">A
 							passionate Software Engineering Student</h2> <br />
 					</div>
 
@@ -123,8 +125,10 @@
 			animation-delay: var(--delay, 0.8s);
 			/* Ensure it's part of the stacking context and can have its own z-index */
 			position: relative;
-			z-index: 3; /* Ensures icons are above immediate parent content if needed */
-            pointer-events: auto; /* Explicitly allow pointer events on the container */
+			z-index: 3;
+			/* Ensures icons are above immediate parent content if needed */
+			pointer-events: auto;
+			/* Explicitly allow pointer events on the container */
 		}
 
 		.hero-socials a {
@@ -133,17 +137,20 @@
 			color: #ffffff;
 			text-decoration: none;
 			transition: color 0.3s ease, transform 0.3s ease;
-            /* Ensure links themselves are clickable */
-            position: relative; /* Good practice for interactive elements */
-            z-index: 4; /* Highest within the hero content */
-            pointer-events: auto; /* *** Crucial: Ensure links accept clicks *** */
+			/* Ensure links themselves are clickable */
+			position: relative;
+			/* Good practice for interactive elements */
+			z-index: 4;
+			/* Highest within the hero content */
+			pointer-events: auto;
+			/* *** Crucial: Ensure links accept clicks *** */
 		}
 
 		.hero-socials a i.icon {
 			font-size: 2.2rem;
 			vertical-align: middle;
-            /* Icons themselves don't need pointer events, the link handles it */
-            pointer-events: none;
+			/* Icons themselves don't need pointer events, the link handles it */
+			pointer-events: none;
 		}
 
 		.hero-socials a:hover {
@@ -157,6 +164,7 @@
 				opacity: 0;
 				transform: translateY(15px);
 			}
+
 			to {
 				opacity: 1;
 				transform: translateY(0);
@@ -166,32 +174,39 @@
 		/* Ensure hero content aligns well */
 		.hero-content {
 			text-align: center;
-			position: relative; /* Needed for z-index and positioning children */
-			z-index: 2;         /* *** Ensure content is above decorative elements (z-index: 1) *** */
+			position: relative;
+			/* Needed for z-index and positioning children */
+			z-index: 2;
+			/* *** Ensure content is above decorative elements (z-index: 1) *** */
 		}
 
 		/* Name container within hero-content */
 		.name-container {
 			display: inline-block;
 			text-align: center;
-            max-width: 800px; /* From your later rules */
-            margin: 0 auto;   /* From your later rules */
-            padding: 0 20px;  /* From your later rules */
-            position: relative; /* Ensure it respects parent stacking */
-            z-index: 2; /* Keep same level or slightly above other text if needed */
+			max-width: 800px;
+			/* From your later rules */
+			margin: 0 auto;
+			/* From your later rules */
+			padding: 0 20px;
+			/* From your later rules */
+			position: relative;
+			/* Ensure it respects parent stacking */
+			z-index: 2;
+			/* Keep same level or slightly above other text if needed */
 		}
 
 		/* Text animation */
 		.animate-text {
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInUp 0.8s ease-out forwards;
-            animation-delay: var(--delay);
+			opacity: 0;
+			transform: translateY(20px);
+			animation: fadeInUp 0.8s ease-out forwards;
+			animation-delay: var(--delay);
 		}
 
-        .animate-icons {
-            /* Already handled by .hero-socials animation */
-        }
+		.animate-icons {
+			/* Already handled by .hero-socials animation */
+		}
 
 
 		/* --- Decorative elements --- */
@@ -201,48 +216,54 @@
 			left: 0;
 			width: 100%;
 			height: 100%;
-			z-index: 1;             /* *** Keep behind hero-content (z-index: 2) *** */
-			pointer-events: none;   /* *** MOST CRUCIAL: Ignore clicks/hovers *** */
+			z-index: 1;
+			/* *** Keep behind hero-content (z-index: 2) *** */
+			pointer-events: none;
+			/* *** MOST CRUCIAL: Ignore clicks/hovers *** */
 		}
 
 		.decorative-elements .dot {
-            position: absolute;
-            width: 8px;
-            height: 8px;
-            background: rgba(14, 180, 147, 0.2);
-            border-radius: 50%;
-            left: var(--left);
-            top: var(--top);
-            opacity: 0;
-            animation: fadeIn 1s ease-out forwards;
-            animation-delay: var(--delay);
-            /* Inherits pointer-events: none from parent */
+			position: absolute;
+			width: 8px;
+			height: 8px;
+			background: rgba(14, 180, 147, 0.2);
+			border-radius: 50%;
+			left: var(--left);
+			top: var(--top);
+			opacity: 0;
+			animation: fadeIn 1s ease-out forwards;
+			animation-delay: var(--delay);
+			/* Inherits pointer-events: none from parent */
 		}
 
 		.decorative-elements .code-bracket {
-            position: absolute;
-            font-family: monospace;
-            color: rgba(14, 180, 147, 0.08);
-            font-size: 15rem;
-            bottom: -50px;
-            right: -30px;
-            z-index: -1; /* Keep it behind even the decorative dots if needed */
-            /* Inherits pointer-events: none from parent */
+			position: absolute;
+			font-family: monospace;
+			color: rgba(14, 180, 147, 0.08);
+			font-size: 15rem;
+			bottom: -50px;
+			right: -30px;
+			z-index: -1;
+			/* Keep it behind even the decorative dots if needed */
+			/* Inherits pointer-events: none from parent */
 		}
-        /* --- End Decorative elements --- */
+
+		/* --- End Decorative elements --- */
 
 
 		/* Clean, feminine styling section - Keeping your styles */
 		#banner {
-            /* Combined from your rules */
+			/* Combined from your rules */
 			color: #333;
 			padding: 80px 0;
 			min-height: 90vh;
 			display: flex;
 			align-items: center;
-			position: relative; /* Keeps stacking context */
+			position: relative;
+			/* Keeps stacking context */
 			overflow: hidden;
-            z-index: 0; /* Optional base z-index */
+			z-index: 0;
+			/* Optional base z-index */
 		}
 
 		/* Navigation */
@@ -252,7 +273,8 @@
 			right: 30px;
 			display: flex;
 			gap: 25px;
-            z-index: 100; /* Ensure nav is always on top */
+			z-index: 100;
+			/* Ensure nav is always on top */
 		}
 
 		.mini-nav a {
@@ -272,11 +294,14 @@
 		/* Text styles with animation */
 		.greeting {
 			font-size: 1.3rem;
-			color: #0EB493; /* Your specific color */
+			color: #0EB493;
+			/* Your specific color */
 			margin-bottom: 5px;
-			font-weight: 300; /* Your specific weight */
-			letter-spacing: 2px; /* Your specific spacing */
-            /* Animation handled by .animate-text */
+			font-weight: 300;
+			/* Your specific weight */
+			letter-spacing: 2px;
+			/* Your specific spacing */
+			/* Animation handled by .animate-text */
 		}
 
 		.name {
@@ -285,22 +310,30 @@
 			font-weight: 700;
 			margin: 0;
 			line-height: 1.1;
-			color: #222; /* Your specific color */
+			color: #222;
+			/* Your specific color */
 			letter-spacing: 1px;
-            /* Animation handled by .animate-text */
+			/* Animation handled by .animate-text */
 		}
 
 		/* .title selector might conflict with your global .title style, rename if needed */
-        /* Assuming this is for the h2 subtitle */
-		.hero-content h2.greeting { /* More specific selector */
-            font-family: 'Montserrat', sans-serif; /* Apply only here if needed */
-			font-size: 1.4rem; /* Your specific size */
-			font-weight: 300; /* Your specific weight */
-			color: #fff; /* Your specific color (was white in HTML) */
+		/* Assuming this is for the h2 subtitle */
+		.hero-content h2.greeting {
+			/* More specific selector */
+			font-family: 'Montserrat', sans-serif;
+			/* Apply only here if needed */
+			font-size: 1.4rem;
+			/* Your specific size */
+			font-weight: 300;
+			/* Your specific weight */
+			color: #fff;
+			/* Your specific color (was white in HTML) */
 			margin: 15px 0 0 0;
-			letter-spacing: 3px; /* Your specific spacing */
-			text-transform: uppercase; /* Your specific transform */
-            /* Animation handled by .animate-text */
+			letter-spacing: 3px;
+			/* Your specific spacing */
+			text-transform: uppercase;
+			/* Your specific transform */
+			/* Animation handled by .animate-text */
 		}
 
 		/* Keyframes (already defined above or assumed global) */
@@ -310,7 +343,8 @@
 				transform: translateY(0);
 			}
 		}
-        @keyframes fadeIn {
+
+		@keyframes fadeIn {
 			to {
 				opacity: 1;
 			}
@@ -322,7 +356,8 @@
 			.name {
 				font-size: 3rem;
 			}
-            /* Adjust the subtitle responsive style if needed */
+
+			/* Adjust the subtitle responsive style if needed */
 			.hero-content h2.greeting {
 				font-size: 1.1rem;
 			}
@@ -336,9 +371,10 @@
 				font-size: 10rem;
 			}
 
-            .hero-socials a i.icon {
-                font-size: 1.8rem; /* Slightly smaller on mobile */
-            }
+			.hero-socials a i.icon {
+				font-size: 1.8rem;
+				/* Slightly smaller on mobile */
+			}
 		}
 	</style>
 
@@ -454,111 +490,113 @@
 
 
 
-<!-- Skills section-->
-<section id="features">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="title">
-                    <h2>SKILLS</h2>
-                    <p>The technologies and methodologies I work with.</p>
-                </div>
-            </div>
-        </div>
-        <div class="row">
+	<!-- Skills section-->
+	<section id="features">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="title">
+						<h2>SKILLS</h2>
+						<p>The technologies and methodologies I work with.</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
 
-            <!-- Block 1 -->
-            <div class="col-md-4 col-xs-6 col-sm-6">
-                <!-- Apply animation to the block -->
-                <div class="feature-block text-center wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.1s">
-                    <div class="icon-box">
-                        <i class="ion-ios-gear"></i>
-                    </div>
-                    <!-- Remove wow classes from inner elements -->
-                    <h4>Back-End</h4>
-                    <p style="font-weight: bold; color: white;"> <!-- Keep inline styles if needed, but consider moving to CSS -->
-                        Java, Spring Boot, Spring Security,<br>Spring Cloud, Python, Node.js
-                    </p>
-                </div>
-            </div>
+				<!-- Block 1 -->
+				<div class="col-md-4 col-xs-6 col-sm-6">
+					<!-- Apply animation to the block -->
+					<div class="feature-block text-center wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.1s">
+						<div class="icon-box">
+							<i class="ion-ios-gear"></i>
+						</div>
+						<!-- Remove wow classes from inner elements -->
+						<h4>Back-End</h4>
+						<p style="font-weight: bold; color: white;">
+							<!-- Keep inline styles if needed, but consider moving to CSS -->
+							Java, Spring Boot, Spring Security,<br>Spring Cloud, Python, Node.js
+						</p>
+					</div>
+				</div>
 
-            <!-- Block 2 -->
-            <div class="col-md-4 col-xs-6 col-sm-6">
-                <!-- Apply animation to the block -->
-                <div class="feature-block text-center wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
-                    <div class="icon-box">
-                        <i class="ion-monitor"></i>
-                    </div>
-                    <!-- Remove wow classes from inner elements -->
-                    <h4>Front-End</h4>
-                    <p style="font-weight: bold; color: white;">
-                        React.js, Next.js, HTML, CSS,<br>JavaScript, Material-UI
-                    </p>
-                </div>
-            </div>
+				<!-- Block 2 -->
+				<div class="col-md-4 col-xs-6 col-sm-6">
+					<!-- Apply animation to the block -->
+					<div class="feature-block text-center wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
+						<div class="icon-box">
+							<i class="ion-monitor"></i>
+						</div>
+						<!-- Remove wow classes from inner elements -->
+						<h4>Front-End</h4>
+						<p style="font-weight: bold; color: white;">
+							React.js, Next.js, HTML, CSS,<br>JavaScript, Material-UI
+						</p>
+					</div>
+				</div>
 
-            <!-- Block 3 -->
-            <div class="col-md-4 col-xs-6 col-sm-6">
-                <!-- Apply animation to the block -->
-                <div class="feature-block text-center wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
-                    <div class="icon-box">
-                        <i class="ion-ios-box"></i>
-                    </div>
-                    <!-- Remove wow classes from inner elements -->
-                    <h4>Databases</h4>
-                    <p style="font-weight: bold; color: white;">
-                        MySQL, Oracle, SQL Server (T-SQL),<br>PostgreSQL, PL/SQL
-                    </p>
-                </div>
-            </div>
+				<!-- Block 3 -->
+				<div class="col-md-4 col-xs-6 col-sm-6">
+					<!-- Apply animation to the block -->
+					<div class="feature-block text-center wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
+						<div class="icon-box">
+							<i class="ion-ios-box"></i>
+						</div>
+						<!-- Remove wow classes from inner elements -->
+						<h4>Databases</h4>
+						<p style="font-weight: bold; color: white;">
+							MySQL, Oracle, SQL Server (T-SQL),<br>PostgreSQL, PL/SQL
+						</p>
+					</div>
+				</div>
 
-            <!-- Block 4 -->
-            <div class="col-md-4 col-xs-6 col-sm-6">
-                <!-- Apply animation to the block -->
-                <div class="feature-block text-center wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.1s"> <!-- Restart delay pattern for second row -->
-                    <div class="icon-box">
-                        <i class="ion-settings"></i>
-                    </div>
-                    <!-- Remove wow classes from inner elements -->
-                    <h4>DevOps & Tools</h4>
-                    <p style="font-weight: bold; color: white;">
-                        Docker, Git, GitHub, CI/CD,<br>Maven, Postman API
-                    </p>
-                </div>
-            </div>
+				<!-- Block 4 -->
+				<div class="col-md-4 col-xs-6 col-sm-6">
+					<!-- Apply animation to the block -->
+					<div class="feature-block text-center wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.1s">
+						<!-- Restart delay pattern for second row -->
+						<div class="icon-box">
+							<i class="ion-settings"></i>
+						</div>
+						<!-- Remove wow classes from inner elements -->
+						<h4>DevOps & Tools</h4>
+						<p style="font-weight: bold; color: white;">
+							Docker, Git, GitHub, CI/CD,<br>Maven, Postman API
+						</p>
+					</div>
+				</div>
 
-            <!-- Block 5 -->
-            <div class="col-md-4 col-xs-6 col-sm-6">
-                <!-- Apply animation to the block -->
-                <div class="feature-block text-center wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
-                    <div class="icon-box">
-                        <i class="ion-ios-people"></i>
-                    </div>
-                    <!-- Remove wow classes from inner elements -->
-                    <h4>Soft Skills</h4>
-                    <p style="font-weight: bold; color: white;">
-                        Leadership, Agile Teamwork,<br>Problem-Solving, Communication,<br>Technical Documentation
-                    </p>
-                </div>
-            </div>
+				<!-- Block 5 -->
+				<div class="col-md-4 col-xs-6 col-sm-6">
+					<!-- Apply animation to the block -->
+					<div class="feature-block text-center wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.2s">
+						<div class="icon-box">
+							<i class="ion-ios-people"></i>
+						</div>
+						<!-- Remove wow classes from inner elements -->
+						<h4>Soft Skills</h4>
+						<p style="font-weight: bold; color: white;">
+							Leadership, Agile Teamwork,<br>Problem-Solving, Communication,<br>Technical Documentation
+						</p>
+					</div>
+				</div>
 
-            <!-- Block 6 -->
-            <div class="col-md-4 col-xs-6 col-sm-6">
-                <!-- Apply animation to the block -->
-                <div class="feature-block text-center wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
-                    <div class="icon-box">
-                        <i class="ion-network"></i>
-                    </div>
-                    <!-- Remove wow classes from inner elements -->
-                    <h4>Concepts & Design</h4>
-                    <p style="font-weight: bold; color: white;">
-                        UML Design, Needs Analysis,<br>Project Management
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+				<!-- Block 6 -->
+				<div class="col-md-4 col-xs-6 col-sm-6">
+					<!-- Apply animation to the block -->
+					<div class="feature-block text-center wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
+						<div class="icon-box">
+							<i class="ion-network"></i>
+						</div>
+						<!-- Remove wow classes from inner elements -->
+						<h4>Concepts & Design</h4>
+						<p style="font-weight: bold; color: white;">
+							UML Design, Needs Analysis,<br>Project Management
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
 
 
