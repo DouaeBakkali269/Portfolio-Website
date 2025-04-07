@@ -56,7 +56,7 @@
 					<li><a href="#features">Skills</a></li>
 					<li><a href="#education">Education</a></li>
 					<li><a href="#experience">Experience</a></li>
-					<li><a href="#portfolio">Portfolio</a></li>
+					<li><a href="#portfolio">Projects</a></li>
 					<li><a href="#languages">Languages</a></li>
 					<li><a href="#blog">Blog</a></li>
 					
@@ -241,6 +241,8 @@
 			}
 		}
 	</style>
+
+
 <!-- Start About Section -->
 <section id="about" class="about-section">
     <div class="container">
@@ -585,29 +587,11 @@
 	
 	  animateOnScroll(animatedElements);
 	});
-	</script>
-
-<script>
-    // Animation trigger on scroll
-    document.addEventListener('DOMContentLoaded', function() {
-        const paragraphs = document.querySelectorAll('.animate-paragraph');
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animated');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.1 });
-        
-        paragraphs.forEach(paragraph => {
-            observer.observe(paragraph);
-        });
-    });
 </script>
 
 
+
+<!-- Skills section-->
 		<section id="features">
 			<div class="container">
 				<div class="row">
@@ -621,7 +605,7 @@
 				<div class="row">
                     
 					<div class="col-md-4 col-xs-6 col-sm-6">
-						<div class="feature-block text-center">
+						<div class="feature-block text-center"  style="--delay:1">
 							<div class="icon-box">
 								<i class="ion-ios-gear"></i>
 							</div>
@@ -631,7 +615,7 @@
 					</div>
                     
 					<div class="col-md-4 col-xs-6 col-sm-6">
-						<div class="feature-block text-center">
+						<div class="feature-block text-center" style="--delay:2">
 							<div class="icon-box">
 								<i class="ion-monitor"></i>
 							</div>
@@ -685,10 +669,9 @@
 		</section>
 
 
+		
 		<section id="counter">
-			<div class="container">
-
-				
+			<div class="container">			
 	 <!-- Start Education Section - NEW -->
 	 <section id="education">
 		<div class="container">
@@ -741,10 +724,9 @@
 
 
 
-
-
 </div>
 </section>
+
 
 <br/>
 <br/>
