@@ -477,7 +477,115 @@
         50% { transform: translateY(-20px) rotate(5deg); }
         100% { transform: translateY(0) rotate(0deg); }
     }
+	/* ===== Scroll-Triggered Animations ===== */
+/* Title Animation */
+.section-heading {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.2, 0.6, 0.2, 1);
+}
+
+.section-heading.animated {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Subtitle Animation */
+.section-subheading {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s cubic-bezier(0.2, 0.6, 0.2, 1) 0.2s;
+}
+
+.section-subheading.animated {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Paragraph Animations */
+.animate-paragraph {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: all 0.8s ease;
+}
+
+.animate-paragraph.animated {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Skills Cloud Animation */
+.skills-cloud {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.8s cubic-bezier(0.2, 0.6, 0.2, 1) 0.4s;
+}
+
+.skills-cloud.animated {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Individual Skill Tags */
+.skill-tag {
+  display: inline-block;
+  margin: 5px;
+  padding: 8px 15px;
+  background: rgba(52, 152, 219, 0.1);
+  border-radius: 20px;
+  color: #3498db;
+  font-weight: 500;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease calc(var(--i) * 0.1s);
+}
+
+.skill-tag.animated {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Profile Image Animation */
+.profile-image-wrapper {
+  opacity: 0;
+  transform: scale(0.9) rotate(-5deg);
+  transition: all 0.8s cubic-bezier(0.2, 0.6, 0.2, 1) 0.3s;
+}
+
+.profile-image-wrapper.animated {
+  opacity: 1;
+  transform: scale(1) rotate(0);
+}
 </style>
+
+<script>
+	// Intersection Observer to trigger animations
+	document.addEventListener('DOMContentLoaded', function() {
+	  const animateOnScroll = (elements) => {
+		const observer = new IntersectionObserver((entries) => {
+		  entries.forEach(entry => {
+			if (entry.isIntersecting) {
+			  entry.target.classList.add('animated');
+			}
+		  });
+		}, { threshold: 0.1 });
+	
+		elements.forEach(el => observer.observe(el));
+	  };
+	
+	  // Target elements to animate
+	  const animatedElements = [
+		document.querySelector('.section-heading'),
+		document.querySelector('.section-subheading'),
+		...document.querySelectorAll('.animate-paragraph'),
+		document.querySelector('.skills-cloud'),
+		...document.querySelectorAll('.skill-tag'),
+		document.querySelector('.profile-image-wrapper')
+	  ];
+	
+	  animateOnScroll(animatedElements);
+	});
+	</script>
 
 <script>
     // Animation trigger on scroll
