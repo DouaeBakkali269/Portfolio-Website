@@ -722,78 +722,96 @@
 
 how to make the skill bigger
 </style>
-<section id="blog">
+<section id="blog" class="blog-section">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
                 <div class="title">
                     <h2>Tech Blog</h2>
-                    <p>Insights and experiences from my software development journey<br> and DevOps practices
-                    </p>
+                    <p>Insights and experiences from my software development journey<br>and DevOps practices</p>
                 </div>
                 <div id="blog-post" class="owl-carousel">
+                    <!-- CI/CD Pipeline -->
                     <div>
                         <div class="block">
-                            <img src="img/blog/devops-pipeline.jpg" alt="CI/CD Pipeline" class="img-responsive">
+                            <div class="image-frame">
+                                <img src="img/blog/devops-pipeline.jpg" alt="CI/CD Pipeline" class="img-responsive">
+                            </div>
                             <div class="content">
-                                <h4><a href="blog.html">Building CI/CD Pipelines with GitHub Actions</a></h4>
+                                <h4><a href="https://github.blog/2022-02-02-build-ci-cd-pipeline-github-actions/" target="_blank">Building CI/CD Pipelines with GitHub Actions</a></h4>
                                 <small>By Douae / June 2024</small>
                                 <p>
                                     How I implemented automated testing and deployment for Spring Boot applications using GitHub Actions, reducing deployment time by 70%.
                                 </p>
-                                <a href="blog.html" class="btn btn-read">Read More</a>
+                                <a href="https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-java-with-maven" target="_blank" class="btn btn-read">Read More</a>
                             </div>
                         </div>
                     </div>
+                    
+                    <!-- React Optimization -->
                     <div>
                         <div class="block">
-                            <img src="img/blog/react-optimization.jpg" alt="React Performance" class="img-responsive">
+                            <div class="image-frame">
+                                <img src="img/blog/react-optimization.jpg" alt="React Performance" class="img-responsive">
+                            </div>
                             <div class="content">
-                                <h4><a href="blog.html">React Performance Optimization Techniques</a></h4>
+                                <h4><a href="https://react.dev/learn/performance" target="_blank">React Performance Optimization Techniques</a></h4>
                                 <small>By Douae / May 2024</small>
                                 <p>
                                     Practical strategies I used to reduce bundle size and improve rendering performance in large React applications with Next.js.
                                 </p>
-                                <a href="blog.html" class="btn btn-read">Read More</a>
+                                <a href="https://nextjs.org/docs/app/building-your-application/optimizing" target="_blank" class="btn btn-read">Read More</a>
                             </div>
                         </div>
                     </div>
+                    
+                    <!-- Microservices -->
                     <div>
                         <div class="block">
-                            <img src="img/blog/microservices.jpg" alt="Microservices Architecture" class="img-responsive">
+                            <div class="image-frame">
+                                <img src="img/blog/microservices.jpg" alt="Microservices Architecture" class="img-responsive">
+                            </div>
                             <div class="content">
-                                <h4><a href="blog.html">From Monolith to Microservices</a></h4>
+                                <h4><a href="https://spring.io/blog/2015/07/14/microservices-with-spring" target="_blank">From Monolith to Microservices</a></h4>
                                 <small>By Douae / April 2024</small>
                                 <p>
                                     My experience transitioning a legacy Java application to microservices architecture using Spring Boot and Docker.
                                 </p>
-                                <a href="blog.html" class="btn btn-read">Read More</a>
+                                <a href="https://spring.io/guides/gs/spring-boot-docker/" target="_blank" class="btn btn-read">Read More</a>
                             </div>
                         </div>
                     </div>
+                    
+                    <!-- Database -->
                     <div>
                         <div class="block">
-                            <img src="img/blog/database-tuning.jpg" alt="Database Optimization" class="img-responsive">
+                            <div class="image-frame">
+                                <img src="img/blog/database-tuning.jpg" alt="Database Optimization" class="img-responsive">
+                            </div>
                             <div class="content">
-                                <h4><a href="blog.html">MySQL Query Optimization Strategies</a></h4>
+                                <h4><a href="https://dev.mysql.com/doc/refman/8.0/en/optimization.html" target="_blank">MySQL Query Optimization Strategies</a></h4>
                                 <small>By Douae / March 2024</small>
                                 <p>
                                     How I improved database performance by 300% through indexing and query optimization in our inventory management system.
                                 </p>
-                                <a href="blog.html" class="btn btn-read">Read More</a>
+                                <a href="https://www.percona.com/blog/mysql-query-optimization/" target="_blank" class="btn btn-read">Read More</a>
                             </div>
                         </div>
                     </div>
+                    
+                    <!-- Agile -->
                     <div>
                         <div class="block">
-                            <img src="img/blog/agile-dev.jpg" alt="Agile Development" class="img-responsive">
+                            <div class="image-frame">
+                                <img src="img/blog/agile-dev.jpg" alt="Agile Development" class="img-responsive">
+                            </div>
                             <div class="content">
-                                <h4><a href="blog.html">Implementing Agile in Student Projects</a></h4>
+                                <h4><a href="https://www.scrum.org/resources/what-is-scrum" target="_blank">Implementing Agile in Student Projects</a></h4>
                                 <small>By Douae / February 2024</small>
                                 <p>
                                     Adapting Scrum methodology for academic software projects at ENSIAS - challenges and lessons learned.
                                 </p>
-                                <a href="blog.html" class="btn btn-read">Read More</a>
+                                <a href="https://www.agilealliance.org/agile101/" target="_blank" class="btn btn-read">Read More</a>
                             </div>
                         </div>
                     </div>
@@ -803,6 +821,96 @@ how to make the skill bigger
     </div>
 </section>
 
+<style>
+    .blog-section {
+        padding: 80px 0;
+        background: #f9f9ff;
+    }
+    
+    .blog-section .block {
+        background: #fff;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        transition: transform 0.3s ease;
+        height: 450px;
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+    }
+    
+    .image-frame {
+        height: 200px;
+        overflow: hidden;
+    }
+    
+    .blog-section img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+    }
+    
+    .blog-section .block:hover img {
+        transform: scale(1.05);
+    }
+    
+    .blog-section .content {
+        padding: 20px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .blog-section h4 a {
+        color: #2c3e50;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+    
+    .blog-section h4 a:hover {
+        color: #3498db;
+    }
+    
+    .blog-section small {
+        color: #7f8c8d;
+        display: block;
+        margin: 10px 0;
+    }
+    
+    .blog-section p {
+        color: #555;
+        margin-bottom: 20px;
+        flex-grow: 1;
+    }
+    
+    .btn-read {
+        background: #3498db;
+        color: white;
+        padding: 8px 20px;
+        border-radius: 4px;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+        transition: background 0.3s;
+        align-self: flex-start;
+        margin-top: auto;
+    }
+    
+    .btn-read:hover {
+        background: #2980b9;
+        color: white;
+    }
+    
+    @media (max-width: 768px) {
+        .blog-section .block {
+            height: auto;
+        }
+        .image-frame {
+            height: 150px;
+        }
+    }
+</style>
 
 
 
