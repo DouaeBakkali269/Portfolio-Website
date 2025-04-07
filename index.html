@@ -64,117 +64,478 @@
 
 
 	<div class="wrapper">
-		<section id="banner">
+		<section id="banner"> 
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
 						<div class="block">
-							<h1>Clean and Flexible Business Template</h1>
-							<h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <br> tempor incididunt ut
-								labore et dolore magna aliqua. Ut enim ad minim veniam,</h2>
-							<div class="buttons">
-								<a href="#" class="btn btn-learn">Purchase Now</a>
-								<a href="#" class="btn btn-learn">View Featurese</a>
+							<h1 style="font-family: 'Young Sherif', serif;">BAKKALI Douae</h1> 
+							<h2 style="font-family: 'Young Sherif', serif;">A passionate Software Engineer, Full-Stack Developer and Problem Solver</h2>							
+							<h2 style="font-family: 'Young Sherif', serif;">Software Engineering student at ENSIAS with hands-on experience in full-stack development (Spring Boot, React.js) and a passion for building scalable solutions. Seeking an end-of-study internship to contribute technical skills and learn in a dynamic team.</h2>
+							<div class="buttons" style="font-family: 'Young Sherif', serif;">
+								<a href="#portfolio" class="btn btn-learn">View Portfolio</a> 
+								<a href="assets/cv_eng (1).pdf" download="DouaeBakkali_CV.pdf" class="btn btn-learn">
+									Download My CV
+								</a>
+								<a href="#contact-form" class="btn btn-learn">Contact Me</a>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+
+			<div class="scrolldown">
+				<a id="scroll" href="#about" class="scroll"></a> 
+			</div>
+		</section>
 			<div class="scrolldown">
 				<a id="scroll" href="#features" class="scroll"></a>
 			</div>
 		</section>
+
+
+<!-- Start About Section -->
+<section id="about" class="about-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="title"  style="text-align: center;">
+                    <h2 class="section-heading">ABOUT ME</h2>
+                    <p class="section-subheading">Driven & Adaptable Software Engineering Student</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row about-content">
+            <!-- Text Content Column -->
+            <div class="col-md-7">
+                <div class="about-text">
+                    <p class="animate-paragraph" data-animation="fadeInRight">
+                        I am a motivated and detail-oriented Software Engineering student currently in my second year at ENSIAS, Rabat. With a strong foundation from preparatory classes in Mathematics and Physics (CPGE), I have developed a deep passion for crafting efficient and user-centric software solutions. My focus lies in full-stack development, where I enjoy bridging the gap between robust backend systems (using technologies like Java/Spring Boot) and intuitive frontend interfaces (React.js/Next.js).
+                    </p>
+                    
+                    <p class="animate-paragraph" data-animation="fadeInRight" data-delay="0.2s">
+                        My practical experience includes developing a web application for IT inventory management, where I honed my skills in Java, Spring Boot, ReactJS, and database management (MySQL). I thrive in collaborative environments and value effective communication, as demonstrated during my internship and various academic projects.
+                    </p>
+                    
+                    <p class="animate-paragraph" data-animation="fadeInRight" data-delay="0.4s">
+                        Beyond academics and coding, I actively contribute to the tech community. As the Events Lead for IEEE ENSIAS, I gained valuable experience in project management, public speaking, and logistics coordination. My involvement with the Forum Geni career fair, both in sponsorship and editorial roles, further developed my teamwork, communication, and analytical abilities.
+                    </p>
+                    
+                    <p class="animate-paragraph" data-animation="fadeInRight" data-delay="0.6s">
+                        In my free time, I enjoy playing volleyball, exploring interior decoration, reading, and immersing myself in different cultures through travel. I am eager to apply my skills and enthusiasm to a challenging end-of-study internship opportunity.
+                    </p>
+                    
+                    <!-- Animated Skills Tags -->
+                    <div class="skills-cloud">
+                        <span class="skill-tag" >Java</span>
+                        <span class="skill-tag" style="--i:2">Spring Boot</span>
+                        <span class="skill-tag" style="--i:3">React.js</span>
+                        <span class="skill-tag" style="--i:4">Next.js</span>
+                        <span class="skill-tag" style="--i:5">MySQL</span>
+                        <span class="skill-tag" style="--i:6">Full-Stack</span>
+                        <span class="skill-tag" style="--i:7">Teamwork</span>
+                        <span class="skill-tag" style="--i:8">Leadership</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Image Column -->
+            <div class="col-md-5">
+                <div class="profile-container">
+                    <div class="profile-image-wrapper">
+                        <img src="img/douae.png" alt="Douae Bakkali" class="profile-image">
+                        <div class="image-border-animation"></div>
+                        <div class="image-dots-animation"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Floating animated elements -->
+    <div class="floating-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+</section>
+
+<style>
+    /* Base Styles */
+    .about-section {
+        position: relative;
+        padding: 80px 0;
+        background: linear-gradient(135deg, #f9f9ff 0%, #f0f4ff 100%);
+        overflow: hidden;
+    }
+    
+
+    
+
+    
+    .section-subheading {
+        font-size: 1.3rem;
+        color: #7f8c8d;
+        text-align: center;
+        margin-bottom: 50px;
+        font-weight: 500;
+    }
+    
+    /* About Content */
+    .about-content {
+        align-items: center;
+    }
+    
+    .about-text {
+        font-size: 15px;
+        line-height: 1.8;
+        color: #34495e;
+        position: relative;
+        z-index: 2;
+    }
+    
+    .animate-paragraph {
+        opacity: 0;
+        transform: translateX(20px);
+        margin-bottom: 25px;
+        transition: all 0.8s ease;
+    }
+    
+    .animate-paragraph.animated {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    
+    /* Profile Image Styles */
+    .profile-container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        padding: 20px;
+    }
+    
+    .profile-image-wrapper {
+        position: relative;
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+    }
+    
+    .profile-image {
+        width: 100%;
+        height: auto;
+        display: block;
+        position: relative;
+        z-index: 2;
+        border-radius: 15px;
+        transition: transform 0.5s ease;
+    }
+    
+    .profile-image:hover {
+        transform: scale(1.03);
+    }
+    
+    .image-border-animation {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 3px solid transparent;
+        border-radius: 15px;
+        animation: borderPulse 4s infinite linear;
+        z-index: 1;
+    }
+    
+    .image-dots-animation {
+        position: absolute;
+        top: -20px;
+        left: -20px;
+        right: -20px;
+        bottom: -20px;
+        background-image: radial-gradient(#3498db 2px, transparent 2px);
+        background-size: 20px 20px;
+        opacity: 0.3;
+        z-index: 0;
+        animation: dotsMove 20s linear infinite;
+    }
+
+    /* Floating Shapes */
+    .floating-shapes {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 0;
+    }
+    
+    .shape {
+        position: absolute;
+        border-radius: 50%;
+        background: rgba(52, 152, 219, 0.1);
+    }
+    
+    .shape-1 {
+        width: 150px;
+        height: 150px;
+        top: 10%;
+        left: 5%;
+        animation: float 8s ease-in-out infinite;
+    }
+    
+    .shape-2 {
+        width: 200px;
+        height: 200px;
+        bottom: 15%;
+        right: 5%;
+        animation: float 10s ease-in-out infinite reverse;
+    }
+    
+    .shape-3 {
+        width: 100px;
+        height: 100px;
+        top: 60%;
+        left: 30%;
+        animation: float 7s ease-in-out infinite 2s;
+    }
+    
+    /* Animations */
+    @keyframes borderPulse {
+        0% { border-color: rgba(52, 152, 219, 0.3); }
+        50% { border-color: rgba(155, 89, 182, 0.6); }
+        100% { border-color: rgba(52, 152, 219, 0.3); }
+    }
+    
+    @keyframes dotsMove {
+        0% { background-position: 0 0; }
+        100% { background-position: 40px 40px; }
+    }
+    
+    @keyframes skillPopIn {
+        0% { transform: scale(0); opacity: 0; }
+        80% { transform: scale(1.1); }
+        100% { transform: scale(1); opacity: 1; }
+    }
+    
+    @keyframes float {
+        0% { transform: translateY(0) rotate(0deg); }
+        50% { transform: translateY(-20px) rotate(5deg); }
+        100% { transform: translateY(0) rotate(0deg); }
+    }
+</style>
+
+<script>
+    // Animation trigger on scroll
+    document.addEventListener('DOMContentLoaded', function() {
+        const paragraphs = document.querySelectorAll('.animate-paragraph');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animated');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        paragraphs.forEach(paragraph => {
+            observer.observe(paragraph);
+        });
+    });
+</script>
+
+
 		<section id="features">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
 						<div class="title">
-							<h2>OUR BEST SERVICES</h2>
-							<p>Dantes remained confused and silent by this explanation of the <br> thoughts which had unconsciously
-							</p>
+							<h2>SKILLS</h2>
+							<p>The technologies and methodologies I work with.</p>
 						</div>
 					</div>
 				</div>
 				<div class="row">
+                    
 					<div class="col-md-4 col-xs-6 col-sm-6">
 						<div class="feature-block text-center">
 							<div class="icon-box">
-								<i class="ion-easel"></i>
+								<i class="ion-ios-gear"></i>
 							</div>
-							<h4 class="wow fadeInUp" data-wow-delay=".3s">Responsive Design</h4>
-							<p class="wow fadeInUp" data-wow-delay=".5s">Lorem ipsum dolor sit amet, consectetur adipisic-<br>ing
-								elit, sed do eiusmod tempor incididunt ut <br> labore et dolore magna aliqua. Ut enim ad minim</p>
+							<h4 class="wow fadeInUp" data-wow-delay=".3s">Back-End</h4>
+							<p class="wow fadeInUp" data-wow-delay=".5s">Java, Spring Boot, Spring Security,<br>Spring Cloud, Python, Node.js</p>
+						</div>
+					</div>
+                    
+					<div class="col-md-4 col-xs-6 col-sm-6">
+						<div class="feature-block text-center">
+							<div class="icon-box">
+								<i class="ion-monitor"></i>
+							</div>
+							<h4 class="wow fadeInUp" data-wow-delay=".3s">Front-End</h4>
+							<p class="wow fadeInUp" data-wow-delay=".5s">React.js, Next.js, HTML, CSS,<br>JavaScript, Material-UI</p>
 						</div>
 					</div>
 					<div class="col-md-4 col-xs-6 col-sm-6">
 						<div class="feature-block text-center">
 							<div class="icon-box">
-								<i class="ion-paintbucket"></i>
+								<i class="ion-ios-box"></i> 
 							</div>
-							<h4 class="wow fadeInUp" data-wow-delay=".3s">Outstanding Animation</h4>
-							<p class="wow fadeInUp" data-wow-delay=".5s">Lorem ipsum dolor sit amet, consectetur adipisic-<br>ing
-								elit, sed do eiusmod tempor incididunt ut <br> labore et dolore magna aliqua. Ut enim ad minim</p>
+							<h4 class="wow fadeInUp" data-wow-delay=".3s">Databases</h4>
+							<p class="wow fadeInUp" data-wow-delay=".5s">MySQL, Oracle, SQL Server (T-SQL),<br>PostgreSQL, PL/SQL</p>
 						</div>
 					</div>
+
+
+					
 					<div class="col-md-4 col-xs-6 col-sm-6">
 						<div class="feature-block text-center">
 							<div class="icon-box">
-								<i class="ion-paintbrush"></i>
+								<i class="ion-settings"></i> 
 							</div>
-							<h4 class="wow fadeInUp" data-wow-delay=".3s">Unlimited Colors</h4>
-							<p class="wow fadeInUp" data-wow-delay=".5s">Lorem ipsum dolor sit amet, consectetur adipisic-<br>ing
-								elit, sed do eiusmod tempor incididunt ut <br> labore et dolore magna aliqua. Ut enim ad minim</p>
+							<h4 class="wow fadeInUp" data-wow-delay=".3s">DevOps & Tools</h4>
+							<p class="wow fadeInUp" data-wow-delay=".5s">Docker, Git, GitHub, CI/CD,<br>Maven, Postman API</p>
+						</div>
+					</div>
+				   
+					<div class="col-md-4 col-xs-6 col-sm-6">
+						<div class="feature-block text-center">
+							<div class="icon-box">
+								<i class="ion-ios-people"></i>
+							</div>
+							<h4 class="wow fadeInUp" data-wow-delay=".3s">Soft Skills</h4>
+							<p class="wow fadeInUp" data-wow-delay=".5s">Leadership, Agile Teamwork,<br>Problem-Solving, Communication,<br>Technical Documentation</p>
+						</div>
+					</div>
+				   
+					<div class="col-md-4 col-xs-6 col-sm-6">
+						<div class="feature-block text-center">
+							<div class="icon-box">
+								<i class="ion-network"></i> 
+							</div>
+							<h4 class="wow fadeInUp" data-wow-delay=".3s">Concepts & Design</h4>
+							<p class="wow fadeInUp" data-wow-delay=".5s">UML Design, Needs Analysis,<br>Project Management</p>
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
+
+
 		<section id="counter">
 			<div class="container">
-				<div class="row">
+
+				
+	 <!-- Start Education Section - NEW -->
+	 <section id="education">
+		<div class="container">
+			 <div class="row">
+				<div class="col-md-12">
 					<div class="title">
-						<h2>FUN FACTS</h2>
-						<p>Dantes remained confused and silent by this explanation of the <br> thoughts which had unconsciously</p>
-					</div>
-					<div class="col-md-3 col-sm-6 col-xs-6">
-						<div class="block wow fadeInRight" data-wow-delay=".3s">
-							<i class="ion-code"></i>
-							<p class="count-text">
-								<span class="counter-digit">136800 </span> k
-							</p>
-							<p>Lines Coded</p>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-6 col-xs-6">
-						<div class="block wow fadeInRight" data-wow-delay=".5s">
-							<i class="ion-compass"></i>
-							<p class="count-text">
-								<span class="counter-digit">7800 </span> +
-							</p>
-							<p>Lines Coded</p>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-6 col-xs-6">
-						<div class="block wow fadeInRight" data-wow-delay=".7s">
-							<i class="ion-compose"></i>
-							<p class="count-text">
-								<span class="counter-digit">399</span>
-							</p>
-							<p>Lines Coded</p>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-6 col-xs-6">
-						<div class="block wow fadeInRight" data-wow-delay=".9s">
-							<i class="ion-image"></i>
-							<p class="count-text">
-								<span class="counter-digit">9995</span>
-							</p>
-							<p>Lines Coded</p>
-						</div>
+						<h2>EDUCATION</h2>
+						<p>My academic background and qualifications.</p>
 					</div>
 				</div>
+			 </div>
+			 <div class="row">
+				<!-- Education Item 1 -->
+				<div class="col-md-4 col-sm-6 col-xs-12">
+					<div class="feature-block text-center wow fadeInUp" data-wow-delay="0s" style="color: white;">
+						 <div class="icon-box">
+							<i class="ion-university"></i>
+						</div>
+						<h4>Engineering Cycle, Software Engineering</h4>
+						<p>ENSIAS, Rabat, Morocco<br><strong>2023 - 2025 </strong><br><em>2nd Year Student</em></p>
+					</div>
+				</div>
+				 <!-- Education Item 2 -->
+				 <div class="col-md-4 col-sm-6 col-xs-12">
+					<div class="feature-block text-center wow fadeInUp" data-wow-delay=".2s" style="color: white;">
+						 <div class="icon-box">
+							<i class="ion-calculator"></i>
+						</div>
+						<h4>Preparatory Classes (CPGE)</h4>
+						 <p>CPGE Moulay El Hassan, Tangier<br><strong>2021 - 2023</strong><br><em>Mathematics and Physics Option</em></p>
+					</div>
+				</div>
+				 <!-- Education Item 3 -->
+				 <div class="col-md-4 col-sm-6 col-xs-12">
+					 <div class="feature-block text-center wow fadeInUp" data-wow-delay=".4s" style="color: white;">
+						 <div class="icon-box">
+							 <i class="ion-ribbon-b"></i>
+						 </div>
+						 <h4>Baccalaureate, Mathematical Sciences B</h4>
+						 <p>Lycée Technique Moulay Youssef, Tangier<br><strong>2020 - 2021</strong><br><em>Honors</em></p>
+					 </div>
+				 </div>
+			 </div> <!-- / .row -->
+		</div> <!-- / .container -->
+	</section>
+	<!-- End Education Section -->
+
+
+	
+
+
+
+
+
+</div>
+</section>
+
+<br/>
+<br/>
+<br/>
+	<!-- Start Experience Section -->
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="title">
+					<h2>EXPERIENCE</h2>
+					<p>My professional journey and practical applications.</p>
+				</div>
 			</div>
-		</section>
+		</div>
+	   
+		<div class="experience-block">
+			<div class="experience-header">
+				<h3 class="job-title">Web Development Intern</h3>
+				<div class="company-info">
+					<span class="company-name">Wilaya of the Tanger-Tetouan-Al Hoceima Region</span>
+					<span class="experience-date">July 2024</span>
+				</div>
+			</div>
+			
+			<div class="experience-content">
+				<ul class="experience-list">
+					<li>Developed a web application for managing IT inventory and automating discharges using Spring Boot (Back-End) and React.js (Front-End)</li>
+					<li>Designed and implemented features for inventory management and equipment dispatching</li>
+					<li>Communicated effectively with supervisors on requirements, progress, and solutions</li>
+				</ul>
+				
+
+			</div>
+							<div class="skills-tags">
+					<span class="skill-tag">Java</span>
+					<span class="skill-tag">Spring Boot</span>
+					<span class="skill-tag">Spring Security</span>
+					<span class="skill-tag">MySQL</span>
+					<span class="skill-tag">ReactJS</span>
+					<span class="skill-tag">Material-UI</span>
+					<span class="skill-tag">UML</span>
+					<span class="skill-tag">Communication</span>
+				</div>
+		</div>
+	</div>
+
 		<section id="portfolio">
 			<div class="container">
 				<div class="row">
@@ -259,341 +620,192 @@
 		</section>
 		<section id="play-video">
 			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="block">
-							<h2 class="wow fadeInUp" data-wow-delay=".3s">GET THE TEMPLATE</h2>
-							<p class="wow fadeInUp" data-wow-delay=".5s">Dantes remained confused and silent by this explanation of
-								the </p>
-							<a href="https://vimeo.com/channels/staffpicks/145743834" class="html5lightbox" data-width=800
-								data-height=400>
-								<div class="button ion-ios-play-outline wow zoomIn" data-wow-delay=".3s"></div>
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section id="team">
-			<div class="container">
-				<div class="row">
-					<div class="title">
-						<h2>CREATIVE TEAM</h2>
-						<p>Dantes remained confused and silent by this explanation of the <br> thoughts which had unconsciously</p>
-					</div>
-					<div class="col-md-4 col-sm-4 col-xs-6">
-						<div class="block wow fadeInLeft" data-wow-delay=".3s">
-							<img src="img/team-img1.jpg" alt="">
-							<div class="team-overlay">
-								<h3>ROBERT SMITH <span>Product Designer</span></h3>
-								<span class="icon"><i class="ion-quote"></i></span>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-									et dolore magna aliqua. Ut enim ad minim veniam, quis</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4  col-sm-4 col-xs-6">
-						<div class="block wow fadeInLeft" data-wow-delay=".6s">
-							<img src="img/team-img2.jpg" alt="">
-							<div class="team-overlay">
-								<h3>ROBERT SMITH <span>Product Designer</span></h3>
-								<span class="icon"><i class="ion-quote"></i></span>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-									et dolore magna aliqua. Ut enim ad minim veniam, quis</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4  col-sm-4 col-xs-6">
-						<div class="block wow fadeInLeft" data-wow-delay=".9s">
-							<img src="img/team-img3.jpg" alt="">
-							<div class="team-overlay">
-								<h3>ROBERT SMITH <span>Product Designer</span></h3>
-								<span class="icon"><i class="ion-quote"></i></span>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-									et dolore magna aliqua. Ut enim ad minim veniam, quis</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section id="pricing-table">
-			<div class="container">
-				<div class="row">
-					<div class="title">
-						<h2>PRICING TABLE</h2>
-						<p>Dantes remained confused and silent by this explanation of the <br> thoughts which had unconsciously</p>
-					</div>
-					<div class="col-md-4 col">
-						<div class="block text-center wow fadeInLeft" data-wow-delay=".3s">
-							<ul>
-								<li>
-									<h4>STARTER PACK</h4>
-									<p>&#36; 40 <span>/Month</span></p>
-								</li>
-								<li>
-									<p>Unlimited Downloads</p>
-								</li>
-								<li>
-									<p>Unlimited Uploads</p>
-								</li>
-								<li>
-									<p>Unlimited Email Accounts</p>
-								</li>
-								<li>
-									<p> Email Forwards </p>
-								</li>
-								<li>
-									<p>Cloud Storage</p>
-								</li>
-								<li>
-									<p>Screen Share</p>
-								</li>
-								<li>
-									<a href="#" class="btn btn-buy">BUY NOW</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-md-4 col">
-						<div class="block text-center wow zoomIn" data-wow-delay=".3s">
-							<ul>
-								<li>
-									<h4>STARTER PACK</h4>
-									<p>&#36; 40 <span>/Month</span></p>
-								</li>
-								<li>
-									<p>Unlimited Downloads</p>
-								</li>
-								<li>
-									<p>Unlimited Uploads</p>
-								</li>
-								<li>
-									<p>Unlimited Email Accounts</p>
-								</li>
-								<li>
-									<p> Email Forwards </p>
-								</li>
-								<li>
-									<p>Cloud Storage</p>
-								</li>
-								<li>
-									<p>Screen Share</p>
-								</li>
-								<li>
-									<a href="#" class="btn btn-buy">BUY NOW</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-md-4 col">
-						<div class="block text-center wow fadeInRight" data-wow-delay=".3s">
-							<ul>
-								<li>
-									<h4>STARTER PACK</h4>
-									<p>&#36; 40 <span>/Month</span></p>
-								</li>
-								<li>
-									<p>Unlimited Downloads</p>
-								</li>
-								<li>
-									<p>Unlimited Uploads</p>
-								</li>
-								<li>
-									<p>Unlimited Email Accounts</p>
-								</li>
-								<li>
-									<p> Email Forwards </p>
-								</li>
-								<li>
-									<p>Cloud Storage</p>
-								</li>
-								<li>
-									<p>Screen Share</p>
-								</li>
-								<li>
-									<a href="#" class="btn btn-buy">BUY NOW</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section id="blog">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="title">
-							<h2>Blog</h2>
-							<p>Dantes remained confused and silent by this explanation of the <br> thoughts which had unconsciously
-							</p>
-						</div>
-						<div id="blog-post" class="owl-carousel">
-							<div>
-								<div class="block">
-									<img src="img/blog/blog-1.jpg" alt="" class="img-responsive">
-									<div class="content">
-										<h4><a href="blog.html">Hey,This is a blog title</a></h4>
-										<small>By admin / Sept 18, 2014</small>
-										<p>
-											Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ex itaque repudiandae nihil
-											qui debitis atque necessitatibus aliquam, consequuntur autem!
-										</p>
-										<a href="blog.html" class="btn btn-read">Read More</a>
-
-									</div>
+				<section id="languages"> <!-- Added bg-gray for visual separation -->
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="title">
+									 <h2 style="color: white;">LANGUAGES</h2>
 								</div>
+								 <div class="block text-center">
+									 <p style="font-size: 1.1em;">
+										 Arabic (Native)  |  French (Fluent)  |  English (Fluent)  |  Spanish (Basic)
+									 </p>
+								 </div>
 							</div>
-							<div>
-								<div class="block">
-									<img src="img/blog/blog-2.jpg" alt="" class="img-responsive">
-									<div class="content">
-										<h4><a href="blog.html">Hey,This is a blog title</a></h4>
-										<small>By admin / Sept 18, 2014</small>
-										<p>
-											Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ex itaque repudiandae nihil
-											qui debitis atque necessitatibus aliquam, consequuntur autem!
-										</p>
-										<a href="blog.html" class="btn btn-read">Read More</a>
-
-									</div>
-								</div>
-							</div>
-							<div>
-								<div class="block">
-									<img src="img/blog/blog-3.jpg" alt="" class="img-responsive">
-									<div class="content">
-										<h4><a href="blog.html">Hey,This is a blog title</a></h4>
-										<small>By admin / Sept 18, 2014</small>
-										<p>
-											Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ex itaque repudiandae nihil
-											qui debitis atque necessitatibus aliquam, consequuntur autem!
-										</p>
-										<a href="blog.html" class="btn btn-read">Read More</a>
-
-									</div>
-								</div>
-							</div>
-							<div>
-								<div class="block">
-									<img src="img/blog/blog-4.jpg" alt="" class="img-responsive">
-									<div class="content">
-										<h4><a href="blog.html">Hey,This is a blog title</a></h4>
-										<small>By admin / Sept 18, 2014</small>
-										<p>
-											Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ex itaque repudiandae nihil
-											qui debitis atque necessitatibus aliquam, consequuntur autem!
-										</p>
-										<a href="blog.html" class="btn btn-read">Read More</a>
-
-									</div>
-								</div>
-							</div>
-							<div>
-								<div class="block">
-									<img src="img/blog/blog-1.jpg" alt="" class="img-responsive">
-									<div class="content">
-										<h4><a href="blog.html">Hey,This is a blog title</a></h4>
-										<small>By admin / Sept 18, 2014</small>
-										<p>
-											Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ex itaque repudiandae nihil
-											qui debitis atque necessitatibus aliquam, consequuntur autem!
-										</p>
-										<a href="blog.html" class="btn btn-read">Read More</a>
-
-									</div>
-								</div>
-							</div>
-
 						</div>
 					</div>
-				</div>
+				</section>
 			</div>
 		</section>
 
 
 
 
-		<section id="testimonial">
-			<div class="container">
-				<div class="row">
-					<div class="title">
-						<h2>TESTIMONIAL</h2>
-						<p>Dantes remained confused and silent by this explanation of the <br> thoughts which had unconsciously</p>
-					</div>
-					<div class="col col-md-6">
-						<div class="media wow fadeInLeft" data-wow-delay=".3s">
-							<div class="media-left">
-								<a href="#">
-									<img src="img/service-img.png" alt="">
-								</a>
-							</div>
-							<div class="media-body">
-								<a href="#">
-									<h4 class="media-heading">Jonathon Andrew</h4>
-								</a>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-									et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-									aliquip ex ea commo</p>
-							</div>
-						</div>
-					</div>
-					<div class="col col-md-6">
-						<div class="media wow fadeInRight" data-wow-delay=".3s">
-							<div class="media-left">
-								<a href="#">
-									<img src="img/service-img.png" alt="">
-								</a>
-							</div>
-							<div class="media-body">
-								<a href="#">
-									<h4 class="media-heading">Jonathon Andrew</h4>
-								</a>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-									et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-									aliquip ex ea commo</p>
-							</div>
-						</div>
-					</div>
-					<div class="col col-md-6">
-						<div class="media wow fadeInLeft" data-wow-delay=".3s">
-							<div class="media-left">
-								<a href="#">
-									<img src="img/service-img.png" alt="">
-								</a>
-							</div>
-							<div class="media-body">
-								<a href="#">
-									<h4 class="media-heading">Jonathon Andrew</h4>
-								</a>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-									et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-									aliquip ex ea commo</p>
-							</div>
-						</div>
-					</div>
-					<div class="col col-md-6">
-						<div class="media wow fadeInRight" data-wow-delay=".3s">
-							<div class="media-left">
-								<a href="#">
-									<img src="img/service-img.png" alt="">
-								</a>
-							</div>
-							<div class="media-body">
-								<a href="#">
-									<h4 class="media-heading">Jonathon Andrew</h4>
-								</a>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-									et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-									aliquip ex ea commo</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+
+<style>
+    .experience-block {
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        padding: 30px;
+        margin-bottom: 30px;
+        transition: transform 0.3s ease;
+    }
+    
+    .experience-block:hover {
+        transform: translateY(-5px);
+    }
+    
+    .experience-header {
+        margin-bottom: 20px;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 15px;
+		font-size: 15px;
+    }
+    
+    .job-title {
+        font-size: 2rem;
+        font-weight: 600;
+        color: #2c3e50;
+        margin-bottom: 5px;
+    }
+    
+    .company-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    
+    .company-name {
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: #3498db;
+    }
+    
+    .experience-date {
+        font-size: 1.5rem;
+        color: #7f8c8d;
+        background: #f5f5f5;
+        padding: 3px 10px;
+        border-radius: 20px;
+    }
+    
+    .experience-list {
+        padding-left: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .experience-list li {
+        margin-bottom: 10px;
+        color: #34495e;
+        line-height: 1.6;
+    }
+    
+	.skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.skill-tag {
+    font-size: 1.5rem;
+    background: #e0f2fe;
+    color: #0369a1;
+    padding: 5px 12px;
+    border-radius: 20px;
+
+    font-weight: 500;
+}
+
+how to make the skill bigger
+</style>
+<section id="blog">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="title">
+                    <h2>Tech Blog</h2>
+                    <p>Insights and experiences from my software development journey<br> and DevOps practices
+                    </p>
+                </div>
+                <div id="blog-post" class="owl-carousel">
+                    <div>
+                        <div class="block">
+                            <img src="img/blog/devops-pipeline.jpg" alt="CI/CD Pipeline" class="img-responsive">
+                            <div class="content">
+                                <h4><a href="blog.html">Building CI/CD Pipelines with GitHub Actions</a></h4>
+                                <small>By Douae / June 2024</small>
+                                <p>
+                                    How I implemented automated testing and deployment for Spring Boot applications using GitHub Actions, reducing deployment time by 70%.
+                                </p>
+                                <a href="blog.html" class="btn btn-read">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="block">
+                            <img src="img/blog/react-optimization.jpg" alt="React Performance" class="img-responsive">
+                            <div class="content">
+                                <h4><a href="blog.html">React Performance Optimization Techniques</a></h4>
+                                <small>By Douae / May 2024</small>
+                                <p>
+                                    Practical strategies I used to reduce bundle size and improve rendering performance in large React applications with Next.js.
+                                </p>
+                                <a href="blog.html" class="btn btn-read">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="block">
+                            <img src="img/blog/microservices.jpg" alt="Microservices Architecture" class="img-responsive">
+                            <div class="content">
+                                <h4><a href="blog.html">From Monolith to Microservices</a></h4>
+                                <small>By Douae / April 2024</small>
+                                <p>
+                                    My experience transitioning a legacy Java application to microservices architecture using Spring Boot and Docker.
+                                </p>
+                                <a href="blog.html" class="btn btn-read">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="block">
+                            <img src="img/blog/database-tuning.jpg" alt="Database Optimization" class="img-responsive">
+                            <div class="content">
+                                <h4><a href="blog.html">MySQL Query Optimization Strategies</a></h4>
+                                <small>By Douae / March 2024</small>
+                                <p>
+                                    How I improved database performance by 300% through indexing and query optimization in our inventory management system.
+                                </p>
+                                <a href="blog.html" class="btn btn-read">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="block">
+                            <img src="img/blog/agile-dev.jpg" alt="Agile Development" class="img-responsive">
+                            <div class="content">
+                                <h4><a href="blog.html">Implementing Agile in Student Projects</a></h4>
+                                <small>By Douae / February 2024</small>
+                                <p>
+                                    Adapting Scrum methodology for academic software projects at ENSIAS - challenges and lessons learned.
+                                </p>
+                                <a href="blog.html" class="btn btn-read">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
 		<section id="client-logo">
 			<div class="container">
 				<div class="row">
@@ -701,3 +913,4 @@
 </body>
 
 </html>
+
