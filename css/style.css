@@ -389,6 +389,7 @@ header .navbar {
 }
 #portfolio {
   padding: 100px 0;
+  background: #f6f6f6;
 }
 #portfolio .block .recent-work-mixMenu {
   padding-bottom: 40px;
@@ -694,7 +695,6 @@ header .navbar {
 
 #contact-form {
   padding: 100px 0;
-  background:#f9f9f9;
 }
 #contact-form form input,
 #contact-form form textarea {
@@ -822,7 +822,7 @@ footer p {
 
 #blog {
   padding:100px 0;
-  background: #f1f1f1;
+  background: #f6f6f6;
 }
 #blog-post .block {
   background: #fff;
