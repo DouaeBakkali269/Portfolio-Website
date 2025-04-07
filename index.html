@@ -2,7 +2,6 @@
 <html lang="en">
 
 
-
 <head>
 	<meta charset="UTF-8">
 	<title>Themelight</title>
@@ -28,6 +27,13 @@
 </head>
 
 <body id="top">
+
+
+	<!-- scripts -->
+	<div id="particles-js"></div>
+	<script src="particles.js"></script>
+	<script src="app.js"></script>
+
 	<header id="navigation" class="navbar-fixed-top animated-header">
 		<div class="container">
 			<div class="navbar-header">
@@ -63,36 +69,184 @@
 	</header>
 
 
+
+
+
 	<div class="wrapper">
-		<section id="banner"> 
+		<section id="banner">
 			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="block">
-							<h1 style="font-family: 'Young Sherif', serif;">BAKKALI Douae</h1> 
-							<h2 style="font-family: 'Young Sherif', serif;">A passionate Software Engineer, Full-Stack Developer and Problem Solver</h2>							
-							<h2 style="font-family: 'Young Sherif', serif;">Software Engineering student at ENSIAS with hands-on experience in full-stack development (Spring Boot, React.js) and a passion for building scalable solutions. Seeking an end-of-study internship to contribute technical skills and learn in a dynamic team.</h2>
-							<div class="buttons" style="font-family: 'Young Sherif', serif;">
-								<a href="assets/cv_eng (1).pdf" download="DouaeBakkali_CV.pdf" class="btn btn-learn">
-									Download My CV
-								</a>
-								<a href="#contact-form" class="btn btn-learn">Contact Me</a>
-							</div>
-						</div>
+				<div class="hero-content">
+					<!-- Minimal top navigation -->
+					<nav class="mini-nav">
+						<a href="#about">About</a>
+						<a href="#portfolio">Projects</a>
+						<a href="#blog">Blog</a>
+					</nav>
+					
+					<!-- Animated main content -->
+					<div class="name-container">
+						<h1 class="name animate-text" style="--delay: 0.4s">BAKKALI Douae</h1>
+						<h2 class="greeting animate-text" style="--delay: 0.6s; color: white; font-weight: bold;">A passionate Software Engineering Student</h2> <br/>
+					</div>
+					
+					<!-- Subtle decorative elements -->
+					<div class="decorative-elements">
+						<div class="dot" style="--left: 15%; --top: 20%; --delay: 0s"></div>
+						<div class="dot" style="--left: 85%; --top: 30%; --delay: 0.3s"></div>
+						<div class="dot" style="--left: 20%; --top: 70%; --delay: 0.6s"></div>
+						<div class="code-bracket">{ }</div>
 					</div>
 				</div>
 			</div>
-
-			<div class="scrolldown">
-				<a id="scroll" href="#about" class="scroll"></a> 
-			</div>
 		</section>
-			<div class="scrolldown">
-				<a id="scroll" href="#features" class="scroll"></a>
-			</div>
-		</section>
-
-
+	</div>
+	
+	<style>
+		/* Clean, feminine styling */
+		#banner {
+			color: #333;
+			padding: 80px 0;
+			min-height: 90vh;
+			display: flex;
+			align-items: center;
+			position: relative;
+			overflow: hidden;
+		}
+		
+		/* Navigation */
+		.mini-nav {
+			position: absolute;
+			top: 30px;
+			right: 30px;
+			display: flex;
+			gap: 25px;
+		}
+		
+		.mini-nav a {
+			color: #666;
+			text-decoration: none;
+			font-size: 0.9rem;
+			font-weight: 500;
+			letter-spacing: 1px;
+			transition: color 0.3s;
+		}
+		
+		.mini-nav a:hover {
+			color: #0EB493;
+		}
+		
+		/* Centered content */
+		.name-container {
+			text-align: center;
+			max-width: 800px;
+			margin: 0 auto;
+			padding: 0 20px;
+			position: relative;
+			z-index: 2;
+		}
+		
+		/* Text styles with animation */
+		.greeting {
+			font-size: 1.3rem;
+			color: #0EB493;
+			margin-bottom: 5px;
+			font-weight: 300;
+			letter-spacing: 2px;
+		}
+		
+		.name {
+			font-family: 'Playfair Display', serif;
+			font-size: 4.5rem;
+			font-weight: 700;
+			margin: 0;
+			line-height: 1.1;
+			color: #222;
+			letter-spacing: 1px;
+		}
+		
+		.title {
+			font-family: 'Montserrat', sans-serif;
+			font-size: 1.4rem;
+			font-weight: 300;
+			color: #666;
+			margin: 15px 0 0 0;
+			letter-spacing: 3px;
+			text-transform: uppercase;
+		}
+		
+		/* Text animation */
+		.animate-text {
+			opacity: 0;
+			transform: translateY(20px);
+			animation: fadeInUp 0.8s ease-out forwards;
+			animation-delay: var(--delay);
+		}
+		
+		@keyframes fadeInUp {
+			to {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+		
+		/* Decorative elements */
+		.decorative-elements {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			pointer-events: none;
+			z-index: 1;
+		}
+		
+		.dot {
+			position: absolute;
+			width: 8px;
+			height: 8px;
+			background: rgba(14, 180, 147, 0.2);
+			border-radius: 50%;
+			left: var(--left);
+			top: var(--top);
+			opacity: 0;
+			animation: fadeIn 1s ease-out forwards;
+			animation-delay: var(--delay);
+		}
+		
+		.code-bracket {
+			position: absolute;
+			font-family: monospace;
+			color: rgba(14, 180, 147, 0.08);
+			font-size: 15rem;
+			bottom: -50px;
+			right: -30px;
+			z-index: -1;
+		}
+		
+		@keyframes fadeIn {
+			to { opacity: 1; }
+		}
+		
+		/* Responsive adjustments */
+		@media (max-width: 768px) {
+			.name {
+				font-size: 3rem;
+			}
+			
+			.title {
+				font-size: 1.1rem;
+			}
+			
+			.mini-nav {
+				right: 20px;
+				gap: 15px;
+			}
+			
+			.code-bracket {
+				font-size: 10rem;
+			}
+		}
+	</style>
 <!-- Start About Section -->
 <section id="about" class="about-section">
     <div class="container">
@@ -108,7 +262,7 @@
         <div class="row about-content">
             <!-- Text Content Column -->
             <div class="col-md-7">
-                <div class="about-text">
+                <div >
                     <p class="animate-paragraph" data-animation="fadeInRight">
                         I am a motivated and detail-oriented Software Engineering student currently in my second year at ENSIAS, Rabat. With a strong foundation from preparatory classes in Mathematics and Physics (CPGE), I have developed a deep passion for crafting efficient and user-centric software solutions. My focus lies in full-stack development, where I enjoy bridging the gap between robust backend systems (using technologies like Java/Spring Boot) and intuitive frontend interfaces (React.js/Next.js).
                     </p>
